@@ -18,27 +18,132 @@
 <body>
   <div class="view">
     <!-- 网页头部 -->
-    <header></header>
+    <header class="clearfix">
+      <div class="logo fl">
+        <a href="./index.html" title="慢慢买比价网--手机版">
+          <img src="./images/header_logo.png" alt="慢慢买比价网--手机版">
+        </a>
+      </div>
+      <div class="appdown fr">
+        <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap">
+          <img src="./images/header_app.png" alt="手机app下载">
+        </a>
+      </div>
+    </header>
 
     <!-- 搜索框 -->
-    <div class="search"></div>
+    <div class="search">
+      <div class="search-txt">
+        <input type="search" name="" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="search-btn">
+        <input type="submit" value="搜索">
+      </div>
+    </div>
 
-    <!-- 超值折扣推荐 -->
-    <div class="discount"></div>
+    <!-- 导航分类 -->
+    <div class="nav-classify">
+      <div class="row clearfix" id="nav-classify-row">
+        <!-- 导航分类模板的坑 -->
+      </div>
 
-    <!-- 更多优惠信息 -->
-    <div class="more"></div>
+      <!-- 超值折扣推荐 -->
+      <a href="javascript:;" class="discount">
+        <div class="d-title">
+          <span>超值折扣推荐</span>
+          <img src="./images/more.png">
+        </div>
+      </a>
+      <!-- 折扣商品列表 -->
+      <div class="jxhdc">
+        <div class="cu-list">
+          <ul id="jxhdc-list">
+            <!-- 折扣商品列表模板的坑 -->
+          </ul>
+        </div>
+      </div>
 
-    <!-- 品牌排行 -->
-    <div class="brand"></div>
+      <!-- 更多优惠信息 -->
+      <div class="more">
+        <a href="javascript:;">更多优惠信息 »</a>
+      </div>
+
+      <!-- 品牌排行 -->
+      <a href="javascript:;" class="discount">
+        <div class="d-title">
+          <span>品牌排行</span>
+          <img src="./images/more.png">
+        </div>
+    </div>
 
     <!-- 底部 -->
-    <footer></footer>
+    <footer>
+      <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </div>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
   </div>
 
+
+  <!-- 导航分类模板 -->
+  <script type="text/template" id="nav-classify-tpl">
+    {{ each $data item i }}
+    <div class="area-item">
+      <a href="javascript:;">
+        <div class="pic">
+          {{@ item.img }}
+        </div>
+        <div class="name">
+          {{ item.name }}
+        </div>
+      </a>
+    </div>
+    {{/each }}
+  </script>
+  <!-- 折扣商品列表模板 -->
+  <script type="text/template" id="jxhdc-list-tpl">
+    {{ each $data jxhdc i }}
+    <li class="clearfix">
+      <a href="javascript:;">
+        <div class="pic ">
+          <!-- <img src="./images/jxhdc-pic1.jpg" alt=""> -->
+          {{@ jxhdc.productImgSm }}
+        </div>
+        <div class="info">
+          <div class="title">
+            {{ jxhdc.productName }}
+            <span>{{ jxhdc.productPinkage }}元包邮</span>
+          </div>
+          <div class="other">
+            <span class="mall">{{ jxhdc.productFrom }} | {{ jxhdc.productTime }}</span>
+            <span class="comment">
+              <i class="icon-comment"></i>
+              0
+            </span>
+          </div>
+        </div>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
   <!-- 引入脚本 -->
   <script src="./lib/js/jquery/jquery.js"></script>
   <script src="./lib/js/bootstrap/bootstrap.js"></script>
+  <script src="./lib/js/jquery-form/src/jquery.form.js"></script>
+  <script src="./lib/js/template/template-web.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

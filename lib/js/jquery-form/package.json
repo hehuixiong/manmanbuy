@@ -1,0 +1,83 @@
+{
+  "_from": "jquery-form",
+  "_id": "jquery-form@4.2.1",
+  "_inBundle": false,
+  "_integrity": "sha1-hn00Fct3uOciOqpwHw5IHdFq1cI=",
+  "_location": "/jquery-form",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "jquery-form",
+    "name": "jquery-form",
+    "escapedName": "jquery-form",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-form/-/jquery-form-4.2.1.tgz",
+  "_shasum": "867d3415cb77b8e7223aaa701f0e481dd16ad5c2",
+  "_spec": "jquery-form",
+  "_where": "F:\\phpstu\\WWW\\boxuegu",
+  "bugs": {
+    "url": "https://github.com/jquery-form/form/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Kevin Morris"
+    },
+    {
+      "name": "Mike Alsup"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "deprecated": false,
+  "description": "The jQuery Form Plugin allows you to easily and unobtrusively upgrade HTML forms to use AJAX.",
+  "devDependencies": {
+    "chai": "*",
+    "grunt": "~1",
+    "grunt-contrib-uglify": "~2",
+    "grunt-eslint": "*",
+    "grunt-githooks": "*",
+    "grunt-mocha": "*",
+    "gulp": "~3",
+    "gulp-concat": "~2",
+    "gulp-jshint": "~2",
+    "gulp-uglify": "~2",
+    "gulp-util": "~3",
+    "jshint": "~2",
+    "mocha": "*"
+  },
+  "homepage": "https://github.com/jquery-form/form",
+  "jam": {
+    "main": "src/jquery.form.js",
+    "dependencies": {
+      "jquery": ">=1.7"
+    }
+  },
+  "keywords": [
+    "jquery",
+    "ajax",
+    "jquery-plugin",
+    "json",
+    "json-form",
+    "html-form",
+    "form",
+    "jquery-form"
+  ],
+  "license": "(MIT OR LGPL-3.0)",
+  "main": "src/jquery.form.js",
+  "name": "jquery-form",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jquery-form/form.git"
+  },
+  "version": "4.2.1"
+}

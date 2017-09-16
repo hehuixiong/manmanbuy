@@ -1,16 +1,246 @@
 @import 'base.less';
 
 /* 网页头部 */
-header{
 
+header {
+  height: 50px;
+  background: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  .logo {
+    padding: 12px;
+    width: 75%;
+    a {
+      color: #5a5a5a;
+      img {
+        max-height: 25px;
+        max-width: 186px;
+        overflow: hidden;
+      }
+    }
+  }
+  .appdown {
+    padding: 7px;
+    a {
+      img {
+        max-height: 34px;
+        max-width: 34px;
+        overflow: hidden;
+      }
+    }
+  }
 }
+
+
 /* 搜索框 */
-.search{}
+
+.search {
+  border-bottom: 1px solid #e6e6e6;
+  height: 50px;
+  padding: 10px;
+  position: relative;
+  background-color: White;
+  .search-txt {
+    input {
+      -webkit-appearance: none;
+      border: none;
+      background: #f1f1f1;
+      margin: 0px;
+      padding: 0px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      padding-left: 10px;
+      width: 90%;
+      padding-left: 5%;
+      font-size: 16px;
+    }
+  }
+  .search-btn {
+    input {
+      -webkit-appearance: none;
+      width: 63px;
+      background: #ff841d;
+      color: #FFFFFF;
+      border: none;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+/* 分类导航 */
+
+.nav-classify {
+  padding: 6px 0px;
+  .row {
+    margin: 16px 0px;
+    .area-item {
+      height: 80px;
+      float: left;
+      width: 25%;
+      a {
+        text-align: center;
+        .pic {
+          text-align: center;
+          img {
+            width: 50px;
+            margin: 0 auto;
+          }
+        }
+        .name {}
+      }
+    }
+  }
+}
+
+
 /* 超值折扣推荐 */
-.discount{}
+
+.discount {
+  .d-title {
+    height: 35px;
+    background-color: #ff9000;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+    border-bottom: solid 1px #ffc881;
+    line-height: 35px;
+    overflow: hidden;
+    color: #fff;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    clear: both;
+    span {
+      float: left;
+    }
+    img {
+      float: right;
+      margin-right: 10px;
+      color: #FFF;
+      margin-top: 8px;
+      max-height: 20px;
+      max-width: 20px;
+    }
+  }
+}
+
+
+/* 折扣商品列表 */
+
+.jxhdc {
+  .cu-list {
+    ul {
+      li {
+        border-bottom: 1px solid #e0e0e0;
+        padding: 14px 8px;
+        position: relative;
+        a {
+          .pic {
+            width: 110px;
+            float: left;
+            img {
+              width: 100px;
+              height: 100px;
+            }
+          }
+          .info {
+            .title {
+              color: #333333;
+              word-break: break-all;
+              font-size: 15px;
+              line-height: 19px;
+              min-height: 57px;
+              text-align: left;
+              font-weight: normal;
+              span {
+                color: #ff6c00;
+                display: inline;
+              }
+            }
+            .other {
+              .mall {
+                color: #a1a1a1;
+                font-size: 12px;
+                float: left;
+              }
+              .comment {
+                color: #a1a1a1;
+                font-size: 12px;
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 /* 更多优惠信息 */
-.more{}
+
+.more {
+  text-align: center;
+  width: 100%;
+  a {
+    color: #5a5a5a;
+    line-height: 30px;
+    background: #f9f9f9;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+  }
+}
+
+
 /* 品牌排行 */
-.brand{}
+
+.brand {}
+
+
 /* 底部 */
-footer{}
+
+footer {
+  padding-top: 10px;
+  color: #5a5a5a;
+  background: #efefef;
+  .foot-top {
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    height: 34px;
+    line-height: 34px;
+    font-size: 0;
+    a {
+      text-align: center;
+      font-size: 14px;
+      float: left;
+      width: 33.333%;
+      border-right: 1px solid #c4c4c4;
+      img {
+        max-width: 15px;
+        max-height: 15px;
+      }
+    }
+  }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 15px 0;
+    div {
+      a:nth-child(1){
+        color: red;
+      }
+      a {
+        display: inline;
+      }
+    }
+  }
+}
