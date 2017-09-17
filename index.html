@@ -42,13 +42,13 @@
     </div>
 
     <!-- 导航分类 -->
-    <div class="nav-classify">
+    <a class="nav-classify">
       <div class="row clearfix" id="nav-classify-row">
         <!-- 导航分类模板的坑 -->
       </div>
 
       <!-- 超值折扣推荐 -->
-      <a href="javascript:;" class="discount">
+      <a href="./moneyctrl.html" class="discount">
         <div class="d-title">
           <span>超值折扣推荐</span>
           <img src="./images/more.png">
@@ -65,7 +65,7 @@
 
       <!-- 更多优惠信息 -->
       <div class="more">
-        <a href="javascript:;">更多优惠信息 »</a>
+        <a href="./moneyctrl.html">更多优惠信息 »</a>
       </div>
 
       <!-- 品牌排行 -->
@@ -74,34 +74,33 @@
           <span>品牌排行</span>
           <img src="./images/more.png">
         </div>
-    </div>
+      </a>
 
-    <!-- 底部 -->
-    <footer>
-      <div class="foot-top">
-        <a href="javascript:;">登录</a>
-        <a href="javascript:;">注册</a>
-        <a href="javascript:;">
-          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
-          返回顶部
-        </a>
-      </div>
-      <div class="footer">
-        <div>
-          <a href="javascript:;">手机APP下载</a>
-          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+      <!-- 底部 -->
+      <footer>
+        <div class="foot-top">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="javascript:;">
+            <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+            返回顶部
+          </a>
         </div>
-        <div>m.manmanbuy.com</div>
-      </div>
-    </footer>
+        <div class="footer">
+          <div>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+          </div>
+          <div>m.manmanbuy.com</div>
+        </div>
+      </footer>
   </div>
-
 
   <!-- 导航分类模板 -->
   <script type="text/template" id="nav-classify-tpl">
     {{ each $data item i }}
     <div class="area-item">
-      <a href="javascript:;">
+      <a href="{{ item.titlehref }}">
         <div class="pic">
           {{@ item.img }}
         </div>

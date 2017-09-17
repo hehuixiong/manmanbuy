@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <!-- ie 选择最高版本内核　 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>慢慢买比价网--手机版</title>
+  <link rel="stylesheet" href="./lib/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="view">
+    <!-- 网页头部 -->
+    <div class="head">
+      <div class="left">
+        <a href="index.html">
+          <
+        </a>
+      </div>
+      <h1>省钱控 - 最新优惠</h1>
+      <div class="appdown">
+        <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap">
+          <img src="./images/header_app.png" alt="手机app下载">
+        </a>
+      </div>
+    </div>
+
+    <!-- 省钱控-最新优惠 -->
+    <div class="save-money">
+      <ul id="save-money-list">
+        <!-- 省钱控-最新优惠模板的坑 -->
+      </ul>
+    </div>
+
+    <!-- 上下一页按钮 -->
+    <div class="page">
+      <div class="up-page fl">
+        <a href="javascript:;">上一页</a>
+      </div>
+      <div class="center fl">
+        <select name="" id="">
+          <option value="">1/100</option>
+          <option value="">2/100</option>
+          <option value="">3/100</option>
+          <option value="">4/100</option>
+          <option value="">5/100</option>
+        </select>
+      </div>
+      <div class="next-page fr">
+        <a href="javascript:;">下一页</a>
+      </div>
+    </div>
+
+    <div class="ct_menu">
+      <a href="javascript:;">
+        首页
+      </a>
+      &nbsp;>&nbsp;
+      省钱控
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+      <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </div>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
+  </div>
+  <!-- 省钱控-最新优惠模板 -->
+  <script type="text/template" id="save-money-tpl">
+    {{ each $data sm i }}
+    <li class="clearfix">
+      <a href="javascript:;">
+        <div class="pic ">
+          {{@ sm.productImg2 }}
+        </div>
+        <div class="info">
+          <div class="title">
+            {{ sm.productName }}
+            <span>{{ sm.productPinkage }}元包邮</span>
+          </div>
+          <div class="other">
+            <span class="mall"> {{ sm.productFrom }} | {{ sm.productTime }}</span>
+            <span class="comment">
+              <i class="icon-comment"></i>
+              0
+            </span>
+          </div>
+        </div>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
+  <!-- 引入脚本 -->
+  <script src="./lib/js/jquery/jquery.js"></script>
+  <script src="./lib/js/bootstrap/bootstrap.js"></script>
+  <script src="./lib/js/jquery-form/src/jquery.form.js"></script>
+  <script src="./lib/js/template/template-web.js"></script>
+  <script src="./js/moneyctrl.js"></script>
+</body>
+
+</html>
