@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <!-- ie 选择最高版本内核　 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>凑单品 --慢慢买比价网</title>
+  <!-- <link rel="stylesheet" href="./lib/css/bootstrap/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="./css/index.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="view">
+    <!-- 网页顶部 -->
+    <div class="gs-head head">
+      <div class="left">
+        <a href="index.html">
+          <i class="iconfont icon-icon"></i>   
+        </a>
+      </div>
+      <h1>凑单品</h1>
+    </div>
+
+    <!-- 商品列表 -->
+    <div class="gs-meun-list">
+      <div class="list">
+        <!-- 头部 -->
+        <div class="hd">
+          <div class="hd-filter">
+            <ul class="clearfix" id="btn-list">
+              <li>
+                <a href="javascript:;">
+                  <span>京东</span>
+                  <i class="iconfont icon-jiantouxia"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span>华北</span>
+                  <i class="iconfont icon-jiantouxia"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span>全部价格</span>
+                  <i class="iconfont icon-jiantouxia"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="hd-search">
+            <i class="iconfont icon-icon1460187848267"></i>
+          </div>
+          <!-- 各种下拉 -->
+          <div class="mall1 popbox" id="mall1-list">
+            <!-- 各店铺模板的坑 -->
+          </div>
+          <div class="region popbox " id="region-list">
+            <!-- 各地区模板的坑 -->
+          </div>
+          <div class="price popbox " id="price-list">
+            <ul>
+              <li>
+                <a href="javascript:;">全部价格<i class="iconfont icon-dui"></i> </a>
+              </li>
+              <li>
+                <a href="javascript:;">1-3元 <i class="iconfont icon-dui"></i> </a>
+              </li>
+              <li>
+                <a href="javascript:;">3-5元<i class="iconfont icon-dui"></i></a>
+              </li>
+              <li>
+                <a href="javascript:;">5-10元<i class="iconfont icon-dui"></i></a>
+              </li>
+              <li>
+                <a href="javascript:;">10-15元<i class="iconfont icon-dui"></i></a>
+              </li>
+              <li>
+                <a href="javascript:;">15-20元<i class="iconfont icon-dui"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 商品 -->
+        <div class="bd">
+          <div class="item" id="item-list">
+            <!-- 商品数据的模板的坑 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 各店铺模板 -->
+  <script type="text/template" id="mall1-list-tpl">
+    <ul>
+      {{ each $data list i }}
+      <li>
+        <a href="./gsproduct.html?shopid={{ list.shopId }}&areaid=0" id="shop" data-id='{{ list.shopId }}'>{{ list.shopName }}<i class="iconfont icon-dui"></i></a>
+      </li>
+      {{ /each }}
+    </ul>
+  </script>
+  <!-- 各地区模板的坑 -->
+  <script type="text/template" id="region-list-tpl">
+    <ul>
+      {{ each $data list i }}
+      <li>
+        <a href="./gsproduct.html?shopid=0&areaid={{ list.areaId }}" id="areaid" data-id="{{ list.areaId }}">{{ list.areaName }}<i class="iconfont icon-dui"></i></a>
+      </li>
+      {{ /each }}
+    </ul>
+  </script>
+  <!-- 商品数据的模板 -->
+  <script type="text/template" id="item-list-tpl">
+    <ul class="clearfix">
+      {{ each $data item i }}
+      <li>
+        <a href="###">
+          <img src="{{ item.productImg }}" alt="">
+          <div class="pic">
+            <p>{{ item.productName }}</p>
+            <span>{{ item.productPrice }}</span>
+          </div>
+        </a>
+      </li>
+      {{ /each }}
+    </ul>
+  </script>
+  <!-- 引入脚本 -->
+  <script src="./lib/js/jquery/jquery.js"></script>
+  <script src="./lib/js/bootstrap/bootstrap.js"></script>
+  <script src="./lib/js/jquery-form/src/jquery.form.js"></script>
+  <script src="./lib/js/template/template-web.js"></script>
+  <script src="./js/gsproduct.js"></script>
+</body>
+
+</html>

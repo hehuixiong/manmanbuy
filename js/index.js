@@ -22,3 +22,11 @@ $.get('http://139.199.192.48:9090/api/getmoneyctrl', function (data) {
   $("#jxhdc-list").html(template('jxhdc-list-tpl', data.result));
   console.log(data)
 })
+
+
+// 点击回到顶部
+$("#returnTop").on("click", function () {
+  $("html,body").animate({
+    scrollTop: 0
+  }, 500);
+});

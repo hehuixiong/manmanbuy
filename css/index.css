@@ -190,6 +190,7 @@ header .logo {
   width: 75%;
 }
 header .logo a {
+  overflow: hidden;
   color: #5a5a5a;
 }
 header .logo a img {
@@ -199,6 +200,9 @@ header .logo a img {
 }
 header .appdown {
   padding: 7px;
+}
+header .appdown a {
+  overflow: hidden;
 }
 header .appdown a img {
   max-height: 34px;
@@ -223,6 +227,7 @@ footer .foot-top a {
   font-size: 14px;
   float: left;
   width: 33.333%;
+  overflow: hidden;
   border-right: 1px solid #c4c4c4;
 }
 footer .foot-top a img {
@@ -300,6 +305,7 @@ footer .footer div a {
 }
 .view .nav-classify .row .area-item a {
   text-align: center;
+  font-size: 14px;
 }
 .view .nav-classify .row .area-item a .pic {
   text-align: center;
@@ -359,6 +365,7 @@ footer .footer div a {
   text-align: left;
   font-weight: normal;
   overflow: hidden;
+  height: 40px;
 }
 .view .jxhdc .cu-list ul li a .info .title span {
   color: #ff6c00;
@@ -404,6 +411,9 @@ footer .footer div a {
   color: #fff;
   font-family: '黑体';
   font-weight: bold;
+}
+.head .left a i {
+  font-size: 25px;
 }
 .head > h1 {
   text-align: center;
@@ -486,6 +496,8 @@ footer .footer div a {
   left: 50%;
   transform: translateX(-50%);
   height: 32px;
+  padding-left: 44px;
+  font-size: 15px;
 }
 .ct_menu {
   background: #ebebeb;
@@ -502,8 +514,8 @@ footer .footer div a {
   display: inline;
 }
 /* 凑单品 */
-.gs-head .left a {
-  padding-left: 8px;
+.gs-head .left a i {
+  font-size: 25px;
 }
 .gs-head h1 {
   font-weight: 500;
@@ -588,7 +600,7 @@ footer .footer div a {
   color: red;
   font-weight: 900;
   position: absolute;
-  right: 10px;
+  right: 16px;
   top: 0px;
   display: none;
 }

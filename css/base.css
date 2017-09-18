@@ -189,6 +189,7 @@ header .logo {
   width: 75%;
 }
 header .logo a {
+  overflow: hidden;
   color: #5a5a5a;
 }
 header .logo a img {
@@ -198,6 +199,9 @@ header .logo a img {
 }
 header .appdown {
   padding: 7px;
+}
+header .appdown a {
+  overflow: hidden;
 }
 header .appdown a img {
   max-height: 34px;
@@ -222,6 +226,7 @@ footer .foot-top a {
   font-size: 14px;
   float: left;
   width: 33.333%;
+  overflow: hidden;
   border-right: 1px solid #c4c4c4;
 }
 footer .foot-top a img {
