@@ -42,65 +42,65 @@
     </div>
 
     <!-- 导航分类 -->
-    <a class="nav-classify">
+    <div class="nav-classify overflow">
       <div class="row clearfix" id="nav-classify-row">
         <!-- 导航分类模板的坑 -->
       </div>
-
-      <!-- 超值折扣推荐 -->
-      <a href="./moneyctrl.html" class="discount">
-        <div class="d-title">
-          <span>超值折扣推荐</span>
-          <img src="./images/more.png">
-        </div>
-      </a>
-      <!-- 折扣商品列表 -->
-      <div class="jxhdc">
-        <div class="cu-list">
-          <ul id="jxhdc-list">
-            <!-- 折扣商品列表模板的坑 -->
-          </ul>
-        </div>
+    </div>
+    <!-- 超值折扣推荐 -->
+    <a href="./moneyctrl.html" class="discount">
+      <div class="d-title">
+        <span>超值折扣推荐</span>
+        <img src="./images/more.png">
       </div>
-
-      <!-- 更多优惠信息 -->
-      <div class="more">
-        <a href="./moneyctrl.html">更多优惠信息 »</a>
+    </a>
+    <!-- 折扣商品列表 -->
+    <div class="jxhdc">
+      <div class="cu-list">
+        <ul id="jxhdc-list">
+          <!-- 折扣商品列表模板的坑 -->
+        </ul>
       </div>
+    </div>
 
-      <!-- 品牌排行 -->
-      <a href="javascript:;" class="discount">
-        <div class="d-title">
-          <span>品牌排行</span>
-          <img src="./images/more.png">
-        </div>
-      </a>
+    <!-- 更多优惠信息 -->
+    <div class="more">
+      <a href="./moneyctrl.html">更多优惠信息 »</a>
+    </div>
 
-      <!-- 底部 -->
-      <footer>
-        <div class="foot-top">
-          <a href="javascript:;">登录</a>
-          <a href="javascript:;">注册</a>
-          <a href="javascript:;">
-            <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
-            返回顶部
-          </a>
+    <!-- 品牌排行 -->
+    <a href="javascript:;" class="discount">
+      <div class="d-title">
+        <span>品牌排行</span>
+        <img src="./images/more.png">
+      </div>
+    </a>
+
+    <!-- 底部 -->
+    <footer>
+      <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
         </div>
-        <div class="footer">
-          <div>
-            <a href="javascript:;">手机APP下载</a>
-            <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
-          </div>
-          <div>m.manmanbuy.com</div>
-        </div>
-      </footer>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
   </div>
 
   <!-- 导航分类模板 -->
   <script type="text/template" id="nav-classify-tpl">
     {{ each $data item i }}
     <div class="area-item">
-      <a href="{{ item.titlehref }}">
+      <a href="{{ item.titlehref }}" data-id="{{ item.indexmenuId }}">
         <div class="pic">
           {{@ item.img }}
         </div>
@@ -128,7 +128,7 @@
           <div class="other">
             <span class="mall">{{ jxhdc.productFrom }} | {{ jxhdc.productTime }}</span>
             <span class="comment">
-              <i class="icon-comment"></i>
+              <i class="iconfont icon-pinglun"></i>
               0
             </span>
           </div>

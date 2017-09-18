@@ -1,25 +1,63 @@
 /*css 初始化 */
-html,
+@import '../lib/fonts/iconfont.css';
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0px;
+}
+a,
 body,
-ul,
-li,
-ol,
-dl,
+center,
+cite,
+code,
 dd,
+del,
+div,
+dl,
 dt,
-p,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-form,
-fieldset,
+header,
+hr,
+html,
+img,
+input,
+label,
 legend,
-img {
+li,
+mark,
+ol,
+p,
+section,
+span,
+strong,
+textarea,
+time,
+ul,
+var {
   margin: 0;
+  border: 0;
   padding: 0;
+  font-style: normal;
+  box-sizing: border-box;
+}
+body,
+html {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
 }
 fieldset,
 img,
@@ -36,9 +74,13 @@ ol {
   list-style: none;
 }
 input {
+  outline: none;
   padding-top: 0;
   padding-bottom: 0;
   font-family: "微软雅黑";
+}
+input::-webkit-search-cancel-button {
+  display: none;
 }
 select,
 input {
@@ -56,6 +98,7 @@ textarea {
 }
 /*去掉图片底部默认空白缝隙*/
 img {
+  display: block;
   border: 0;
   vertical-align: middle;
 }
@@ -76,8 +119,13 @@ a {
   color: inherit;
   display: block;
 }
+a:active,
 a:hover {
-  color: #C81623;
+  outline: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
 }
 h1,
 h2,
@@ -124,12 +172,12 @@ em {
 }
 /*css初始化完成*/
 .clearfix:after {
-  content: '';
+  content: ' ';
   display: block;
-  height: 0;
   clear: both;
-  overflow: hidden;
+  visibility: hidden;
   line-height: 0;
+  height: 0;
 }
 /* 网页头部 */
 header {
@@ -235,16 +283,18 @@ footer .footer div a {
   right: 10px;
   font-size: 16px;
 }
+.view .overflow {
+  overflow: hidden;
+}
 .view .nav-classify {
   padding: 6px 0px;
-  height: 180px;
-  overflow: hidden;
+  height: 190px;
 }
 .view .nav-classify .row {
   margin: 16px 0px;
 }
 .view .nav-classify .row .area-item {
-  height: 80px;
+  height: 84px;
   float: left;
   width: 25%;
 }
@@ -257,6 +307,11 @@ footer .footer div a {
 .view .nav-classify .row .area-item a .pic img {
   width: 50px;
   margin: 0 auto;
+}
+.view .nav-classify .row .area-item a .name {
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
 }
 .view .discount .d-title {
   height: 35px;
@@ -303,6 +358,7 @@ footer .footer div a {
   min-height: 57px;
   text-align: left;
   font-weight: normal;
+  overflow: hidden;
 }
 .view .jxhdc .cu-list ul li a .info .title span {
   color: #ff6c00;
@@ -317,6 +373,9 @@ footer .footer div a {
   color: #a1a1a1;
   font-size: 12px;
   float: right;
+}
+.view .jxhdc .cu-list ul li a .info .other .comment i {
+  font-size: 12px;
 }
 .view .more {
   text-align: center;
@@ -441,4 +500,128 @@ footer .footer div a {
 }
 .ct_menu a {
   display: inline;
+}
+/* 凑单品 */
+.gs-head .left a {
+  padding-left: 8px;
+}
+.gs-head h1 {
+  font-weight: 500;
+  overflow: hidden;
+  height: 44px;
+}
+/* 商品列表 */
+.gs-meun-list .list {
+  position: relative;
+}
+.gs-meun-list .list .hd {
+  position: relative;
+  height: 38px;
+  border-bottom: 1px solid #dadada;
+  /* 各种下拉 */
+}
+.gs-meun-list .list .hd .hd-filter {
+  padding-right: 46px;
+}
+.gs-meun-list .list .hd .hd-filter ul {
+  border-right: 1px solid #dadada;
+  width: 100%;
+}
+.gs-meun-list .list .hd .hd-filter ul li {
+  width: 33.33%;
+  text-align: center;
+  line-height: 38px;
+  float: left;
+  overflow: hidden;
+  height: 38px;
+}
+.gs-meun-list .list .hd .hd-filter ul li a {
+  font-size: 16px;
+}
+.gs-meun-list .list .hd .hd-filter ul li a i {
+  font-size: 12px;
+}
+.gs-meun-list .list .hd .hd-filter ul li:nth-child(2) a {
+  position: relative;
+}
+.gs-meun-list .list .hd .hd-filter ul li:nth-child(2) a span {
+  display: inline-block;
+  width: 40px;
+  height: 38px;
+  overflow: hidden;
+}
+.gs-meun-list .list .hd .hd-filter ul li:nth-child(2) a i {
+  position: absolute;
+}
+.gs-meun-list .list .hd .hd-search {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+}
+.gs-meun-list .list .hd .hd-search i {
+  font-size: 20px;
+}
+.gs-meun-list .list .hd .popbox.on {
+  display: block;
+  z-index: 10;
+}
+.gs-meun-list .list .hd .popbox {
+  display: none;
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 38px;
+}
+.gs-meun-list .list .hd .popbox > ul > li {
+  border-width: 0 0 1px 0;
+  width: 100%;
+  border-bottom: 1px solid #dadada;
+}
+.gs-meun-list .list .hd .popbox > ul > li a {
+  position: relative;
+  line-height: 40px;
+  padding: 0px 10px;
+  font-size: 16px;
+}
+.gs-meun-list .list .hd .popbox > ul > li a i {
+  color: red;
+  font-weight: 900;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  display: none;
+}
+.gs-meun-list .list .hd .popbox > ul li.on a i {
+  display: block;
+}
+.gs-meun-list .list .bd {
+  background: #f1f1f1;
+  padding: 4px;
+}
+.gs-meun-list .list .bd .item ul li {
+  width: 50%;
+  float: left;
+}
+.gs-meun-list .list .bd .item ul li a {
+  margin: 6px;
+  background-color: #ffffff;
+}
+.gs-meun-list .list .bd .item ul li a img {
+  width: 100%;
+}
+.gs-meun-list .list .bd .item ul li a .pic {
+  padding-left: 6px;
+}
+.gs-meun-list .list .bd .item ul li a .pic p {
+  text-align: left;
+  margin-top: 6px;
+  width: 100%;
+  height: 16px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.gs-meun-list .list .bd .item ul li a .pic span {
+  color: #f8601d;
+  font-size: 20px;
 }

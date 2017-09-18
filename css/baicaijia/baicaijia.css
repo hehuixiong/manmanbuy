@@ -1,41 +1,182 @@
-* {
+/*css 初始化 */
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0px;
+}
+a,
+body,
+center,
+cite,
+code,
+dd,
+del,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hr,
+html,
+img,
+input,
+label,
+legend,
+li,
+mark,
+ol,
+p,
+section,
+span,
+strong,
+textarea,
+time,
+ul,
+var {
   margin: 0;
+  border: 0;
   padding: 0;
+  font-style: normal;
   box-sizing: border-box;
+}
+body,
+html {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+fieldset,
+img,
+input,
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  /*在低版本的ie浏览器里面不支持*/
+  outline-style: none;
 }
 ul,
 ol {
   list-style: none;
 }
-a {
-  text-decoration: none;
-  display: block;
-  color: inherit;
-}
-.clearfix:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  line-height: 0;
-}
-img {
-  display: block;
-  width: 100%;
-}
 input {
   outline: none;
-  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "微软雅黑";
+}
+input::-webkit-search-cancel-button {
+  display: none;
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+/*禁止手动修改大小*/
+textarea {
+  resize: none;
+}
+/*去掉图片底部默认空白缝隙*/
+img {
   display: block;
-  width: 100%;
-  height: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+/*合并外连线*/
+table {
+  /*表格的单元格边框默认是不会重合的，这个属性可以让表格的边框重合在一起，看起来更加细一些*/
+  border-collapse: collapse;
+}
+body {
+  color: #666;
+  background: #fff;
+}
+.clearfix {
+  *zoom: 1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
 }
 .fl {
   float: left;
 }
 .fr {
   float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.hide {
+  display: none;
+}
+.col-red {
+  color: #F10215 !important;
+}
+/*css初始化完成*/
+.clearfix:after {
+  content: ' ';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 /* 网页头部 */
 header {
@@ -99,6 +240,22 @@ footer .footer div a:nth-child(1) {
 footer .footer div a {
   display: inline;
 }
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot');
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .backhead {
   position: relative;
   height: 50px;
@@ -131,49 +288,66 @@ footer .footer div a {
   position: absolute;
   right: 10px;
   top: 8px;
+}
+.backhead .download img {
+  margin: 0;
+  padding: 0;
+  display: block;
   width: 34px;
+  height: 34px;
 }
 .coupon-title {
   width: 100%;
+  position: relative;
 }
-.coupon-title .ul_wapper {
+.coupon-title .bcj_title .ul_wapper {
   width: 100%;
   height: 38px;
   line-height: 38px;
   overflow: hidden;
   position: relative;
 }
-.coupon-title .ul_wapper ul {
-  width: 185%;
+.coupon-title .bcj_title .ul_wapper ul {
+  width: 180%;
   top: 0;
   left: 0;
   margin: 0;
   position: absolute;
 }
-.coupon-title .ul_wapper ul li {
+.coupon-title .bcj_title .ul_wapper ul li {
   float: left;
   text-align: center;
 }
-.coupon-title .ul_wapper ul li a {
+.coupon-title .bcj_title .ul_wapper ul li a {
   color: #333333;
   height: 38px;
   padding: 0 12px;
   font-size: 14px;
 }
-.coupon-title .ul_wapper ul .active a {
+.coupon-title .bcj_title .ul_wapper ul .active a {
   color: #e4393c;
   border-bottom: 2px solid #e4393c;
 }
-.coupon-title .glyphicon-search::before {
-  display: block;
+.coupon-title .searchbtn {
+  position: absolute;
   width: 38px;
   height: 38px;
-  font-size: 20px;
-  position: absolute;
-  color: black;
-  right: 0;
+  line-height: 42px;
+  font-size: 18px;
   top: 0;
-  content: "\e003";
+  right: 0;
+  text-align: center;
+  color: #d5d5d5;
+  background-color: white;
+  font-weight: 400;
+}
+.coupon-title .searchbtn .glyphicon-search {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  top: 7px;
+  right: 6px;
+  border-radius: 0 0 0 14px;
 }
 .bcj-list {
   font-size: 14px;
@@ -402,6 +576,7 @@ footer .footer div a {
   background-color: #999999;
 }
 .footer {
+  overflow: hidden;
   background-color: #f7f7f7;
 }
 .footer .col-xs-4 {

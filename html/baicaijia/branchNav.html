@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <!-- ie 选择最高版本内核　 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>品牌大全页面</title>
+    <link rel="stylesheet" href="../../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/baicaijia/branchNav.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 头部栏 -->
+    <div class="backhead">
+        <!-- 右侧慢慢买logo -->
+        <div class="back">
+            <a href="http://m.manmanbuy.com/" class="">
+                <img src="../../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <!-- 左侧app下载按钮 -->
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia
+" class="download"><img src="../../images/baicaijia/header_app.png" alt=""></a>
+    </div>
+
+    <!-- 搜索栏 -->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button class="searchBtn">搜索</button>
+    </div>
+
+
+    <!-- 主体部分 -->
+    <div class="main">
+        <!-- 底部首页导航条 -->
+        <div class="index_nav">
+            <a href="http://m.manmanbuy.com/">首页 ></a>
+            <span>品牌大全</span>
+        </div>
+
+        <!-- 热门品牌排行 -->
+        <div class="hotBox">
+            <div class="hot">
+                <p>热门品牌排行</p>
+            </div>
+        </div>
+        <!-- 品牌标题 -->
+        <div class="branchTitle">
+            <ul id="branch_ul">
+                <li>
+                    <a href="javascript:;">
+                        平板电视十大品牌    
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 底部 -->
+    <!-- <footer class="footer clearfix">
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="javascript:;">登录</a>
+            </div>
+            <div class="col-xs-4">
+                <a href="javascript:;">注册</a>
+            </div>
+            <div class="col-xs-4">
+                <a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机APP下载</a>
+                <span>慢慢买手机版</span>--掌上比价平台
+            </p>
+            <div>m.manmanbuy.com</div>
+        </div>
+    </footer> -->
+
+    <!-- 主体导航窗口 -->
+    <script id="nav_branchdata" type="text/template">
+        {{ each $data item i }}
+        <li>
+            <a href="javascript:;">
+                {{ item.brandTitle }}    
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+    <script src="../../lib/js/jquery/jquery.js"></script>
+    <script src="../../lib/js/template/template-web.js"></script>
+    <script src="../../js/baicaijia/branchNav.js"></script>
+</body>
+
+</html>

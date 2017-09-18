@@ -240,3 +240,146 @@ footer .footer div a:nth-child(1) {
 footer .footer div a {
   display: inline;
 }
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot');
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  border: 1px solid #ccc;
+}
+.backhead {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: #ff841d;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.backhead .back {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-size: 16px;
+}
+.backhead .back .glyphicon-menu-left:before {
+  content: "\e257";
+}
+.backhead .back a {
+  padding-left: 16px;
+  margin-bottom: 23px;
+  height: 30px;
+  line-height: 30;
+  vertical-align: middle;
+}
+.backhead .back a img {
+  height: 25px;
+}
+.backhead .download {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+.backhead .download img {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 34px;
+  height: 34px;
+}
+.search {
+  margin: 10px auto;
+  width: 100%;
+  padding: 0 10px;
+  position: relative;
+  font-size: 16px;
+}
+.search input {
+  font-size: 16px;
+  height: 30px;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  border-radius: 15px;
+}
+.search .searchBtn {
+  height: 30px;
+  width: 63px;
+  border-radius: 15px;
+  line-height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background-color: #ff841d;
+  color: white;
+}
+.nav_list {
+  margin: 10px auto;
+  width: 300px;
+}
+.nav_list a {
+  font-size: 14px;
+  padding: 10px 8px;
+  background-color: #f4f4f4;
+  border: 1px solid #bfbfbf;
+  float: left;
+  margin: 0 0 5px 5px;
+  color: #000;
+}
+.main {
+  background-color: #f2f2f2;
+}
+.main .index_nav {
+  height: 36px;
+  line-height: 36px;
+  color: #5a5a5a;
+  background-color: #f8f8f8;
+  padding-left: 10px;
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+}
+.main .index_nav a {
+  display: inline;
+}
+.main .hotBox {
+  margin-top: 10px;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+.main .hotBox .hot {
+  color: #874604;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  border: 1px solid #dddddd;
+}
+.main .branchTitle {
+  padding: 0 10px;
+  width: 100%;
+}
+.main .branchTitle ul li {
+  height: 41px;
+  width: 100%;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  background: url(http://www.zuyushop.com/wap/images/arrow1.gif) no-repeat right top 18px;
+}
+.main .branchTitle ul li a {
+  display: inline;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}

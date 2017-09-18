@@ -1,5 +1,23 @@
 @import '../base.less';
 
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot');
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 // @font-face {
 //   font-family: 'Glyphicons Halflings';
 //   src: url('../../lib/fonts/glyphicons-halflings-regular.eot');
@@ -16,6 +34,9 @@
 //   font-weight: normal;
 //   line-height: 1;
 //   -moz-osx-font-smoothing: grayscale;
+// }
+// body{
+//   overflow: hidden;
 // }
 
 // 白菜价头部栏
@@ -50,21 +71,29 @@
         position: absolute;
         right:10px;
         top:8px;
+        img{
+        margin: 0;
+        padding: 0; 
+        display: block;
         width: 34px;
+        height: 34px;
+        }
     }
 }
 
 // 主体部分
 .coupon-title{
     width:100%;
-    .ul_wapper{
-        width: 100%;
-        height: 38px;
-        line-height: 38px;
-        overflow: hidden;
-        position: relative;
-        ul{
-            width: 185%;
+    position: relative;
+    .bcj_title{
+      .ul_wapper{
+          width: 100%;
+          height: 38px;
+          line-height: 38px;
+          overflow: hidden;
+          position: relative;
+          ul{
+            width: 180%;
             top:0;
             left:0;
             margin: 0;
@@ -85,18 +114,29 @@
                     border-bottom:2px solid #e4393c
                 }
             }
-        }
+          }
+      }
     }
-    .glyphicon-search::before{
-        display: block;
-        width: 38px;
-        height: 38px;
-        font-size: 20px;
+    .searchbtn{
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      line-height: 42px;
+      font-size: 18px;
+      top:0;
+      right: 0;
+      text-align: center;
+      color:#d5d5d5;
+      background-color:white;
+      font-weight: 400;
+      .glyphicon-search{
+        z-index: 1;
         position: absolute;
-        color:black;
-        right:0;
-        top:0;
-        content: "\e003";
+        background-color: white;
+        top:7px;
+        right:6px;
+        border-radius: 0 0 0 14px;
+      }
     }
     
    
@@ -335,6 +375,7 @@
 
   // 底部
   .footer{
+    overflow: hidden;
     background-color: #f7f7f7;
     .col-xs-4{
       border: 1px solid #d5d5d5;

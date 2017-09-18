@@ -1,0 +1,201 @@
+@import '../base.less';
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot');
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    border: 1px solid #ccc;
+}
+
+// 品牌大全头部栏
+.backhead{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #ff841d;
+    text-align: center;
+    color:#fff;
+    overflow: hidden;
+    .back{
+        position: absolute;
+        left:0;
+        top:12px;
+        font-size: 16px;
+        .glyphicon-menu-left:before {
+            content: "\e257";
+        }
+        a{
+            padding-left: 16px;
+            margin-bottom: 23px;
+            height: 30px;
+            line-height: 30;
+            vertical-align: middle;
+            img{
+                height: 25px;
+            }
+        }
+    }
+    .download{
+        position: absolute;
+        right:10px;
+        top:8px;
+        img{
+        margin: 0;
+        padding: 0; 
+        display: block;
+        width: 34px;
+        height: 34px;
+        }
+    }
+}
+
+// 搜索栏
+.search{
+    margin: 10px auto;
+    width:100%;
+    padding: 0 10px;
+    position: relative;
+    font-size: 16px;
+    input{
+    font-size: 16px;
+        height: 30px;
+        width:100%;
+        background-color: #f1f1f1;
+        padding-left: 20px;
+        border-radius: 15px;
+    }
+    .searchBtn{
+        height: 30px;
+        width: 63px;
+        border-radius: 15px;
+        line-height: 30px;
+        position: absolute;
+        right: 10px;
+        top:0;
+        background-color: #ff841d;
+        color:white;
+    }
+}
+
+
+
+
+
+
+
+//主体部分
+.nav_list{
+    margin: 10px auto;
+    width: 300px;
+    a{
+        font-size: 14px;
+        padding: 10px 8px;
+        background-color: #f4f4f4;
+        border: 1px solid #bfbfbf;
+        float: left;
+        margin: 0 0 5px 5px;
+        color: #000;
+    }
+}
+
+.main{
+    background-color: #f2f2f2;
+    // 首页导航条
+    .index_nav{
+        height: 36px;
+        line-height: 36px;
+        color: #5a5a5a;
+        background-color: #f8f8f8;
+        padding-left: 10px;
+        border-top: solid 1px #ebebeb;
+        border-bottom: 1px solid #ccc;
+        a{
+            display: inline;
+        }
+    }
+    .hotBox{
+        margin-top: 10px;
+        padding: 0 5px;
+        margin-bottom: 10px;
+        .hot{
+            color:#874604;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            border: 1px solid #dddddd;
+        }
+    }
+    // 品牌标题
+    .branchTitle{
+        padding: 0 10px;
+        width: 100%;
+        ul{
+            li{
+                height: 41px;
+                width: 100%;
+                line-height: 40px;
+                border-bottom: 1px solid #ccc;
+                background: url(http://www.zuyushop.com/wap/images/arrow1.gif) no-repeat right top 18px;
+                a{
+                    display: inline;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+// 底部
+//   .footer{
+//     overflow: hidden;
+//     background-color: #f7f7f7;
+//     .col-xs-4{
+//       border: 1px solid #d5d5d5;
+//       border-collapse: collapse;
+//       text-align: center;
+//       height: 30px;
+//       line-height: 30px;
+//       a{
+//         color:#000;
+//         img{
+//             width:15px;
+//             margin-bottom: 3px;
+//         }
+//       }
+//     }
+//     .bottom{
+//       text-align: center;
+//       margin-top: 15px;
+//       font-size: 12px;
+//       a{
+//         display: inline;
+//         color: #f00;
+//         margin-right: 5px;
+//       }
+//       span{
+//           color: #000;
+//       }
+//       div{
+//         padding-bottom: 15px;
+//       }
+//     }
+//   }
