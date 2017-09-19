@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- ie 选择最高版本内核　 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>慢慢买比价网--手机版</title>
+  <!-- <link rel="stylesheet" href="./lib/css/bootstrap/bootstrap.min.css">  -->
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+  <div class="view">
+    <!-- 网页头部 -->
+    <header class="clearfix">
+      <div class="logo fl">
+        <a href="./index.html" title="慢慢买比价网--手机版">
+          <img src="./images/header_logo.png" alt="慢慢买比价网--手机版">
+        </a>
+      </div>
+      <div class="appdown fr">
+        <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap">
+          <img src="./images/header_app.png" alt="手机app下载">
+        </a>
+      </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="search">
+      <div class="search-txt">
+        <input type="search" name="" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="search-btn">
+        <input type="submit" value="搜索">
+      </div>
+    </div>
+
+    <!-- 登录框 -->
+    <div class="login">
+      <form method="">
+        <div class="user-name">
+          <input type="text" name="user" placeholder="用户名">
+        </div>
+        <div class="user-password">
+          <input type="password" name="pass" id="">
+        </div>
+        <div class="btn-login">
+          <button type="submit">登录</button>
+        </div>
+        <div class="auto-login">
+          <input type="checkbox" name="" id=""> 一个月内自动登录
+        </div>
+        <div class="forget-password">
+          忘记密码：请电脑登录www.manmanbuy.com找回
+        </div>
+      </form>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+      <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </div>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
+
+    <div class="app-promotion-bar"> 
+      <a class="closefix" href="javascript:;"></a>
+      <div class="icon"></div>
+      <p class="titlefix">慢慢买</p>
+      <p class="describe">全网比价,查历史价格</p>
+      <a class="download-btn" href="http://m.manmanbuy.com/app.html?type=foot_loginaspx&amp;value=wap" onclick="trackEvent('底部悬浮下载');">立即打开</a>
+    </div>
+  </div>
+  <!-- 引入脚本 -->
+  <script src="./lib/js/jquery/jquery.js"></script>
+  <script src="./lib/js/jquery-form/src/jquery.form.js"></script>
+  <!-- <script src="./lib/js/template/template-web.js"></script> -->
+  <script src="./js/login.js"></script>
+</body>
+
+</html>

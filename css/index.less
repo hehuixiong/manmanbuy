@@ -24,6 +24,7 @@
         width: 90%;
         padding-left: 5%;
         font-size: 16px;
+        overflow: hidden;
       }
     }
     .search-btn {
@@ -169,6 +170,26 @@
       margin: 10px;
       border: 1px solid #dddddd;
       border-radius: 4px;
+    }
+  } //app下载
+  .app-down {
+    position: fixed;
+    bottom: 60px;
+    right: 0px;
+    a {
+      img {
+        width: 60px;
+        height: 67px;
+      }
+    }
+  }
+  .returnTop {
+    position: fixed;
+    z-index: 999;
+    bottom: 10px;
+    right: 0px;
+    i {
+      font-size: 45px;
     }
   }
 }
@@ -399,6 +420,9 @@
         position: absolute;
         left: 0px;
         top: 38px;
+        >ul.on {
+          // display: none;
+        }
         >ul {
           >li {
             border-width: 0 0 1px 0;

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <title>慢慢买比价网--手机版</title>
-   <!-- <link rel="stylesheet" href="./lib/css/bootstrap/bootstrap.min.css">  -->
+  <!-- <link rel="stylesheet" href="./lib/css/bootstrap/bootstrap.min.css">  -->
   <link rel="stylesheet" href="./css/index.css">
   <!--[if lt IE 9]>
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -63,6 +63,11 @@
       </div>
     </div>
 
+    <!-- 显示加载图片 -->
+    <div class="auto-loading">
+      <img src="./images/loading.gif" alt="">
+    </div>
+
     <!-- 更多优惠信息 -->
     <div class="more">
       <a href="./moneyctrl.html">更多优惠信息 »</a>
@@ -79,7 +84,7 @@
     <!-- 底部 -->
     <footer>
       <div class="foot-top">
-        <a href="javascript:;">登录</a>
+        <a href="./login.html">登录</a>
         <a href="javascript:;">注册</a>
         <a href="javascript:;" id="returnTop">
           <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
@@ -94,8 +99,19 @@
         <div>m.manmanbuy.com</div>
       </div>
     </footer>
-  </div>
 
+    <!-- app下载 -->
+    <div class="app-down">
+      <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
+        <img src="./images/appdown.png" alt="">
+      </a>
+    </div>
+    <!-- 回到顶部 -->
+    <a href="javascript:;" class="returnTop">
+      <i class="iconfont icon-huidaodingbu"></i>
+    </a>
+
+  </div>
   <!-- 导航分类模板 -->
   <script type="text/template" id="nav-classify-tpl">
     {{ each $data item i }}

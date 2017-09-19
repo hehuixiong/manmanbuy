@@ -33,10 +33,23 @@
     </div>
 
     <!-- 省钱控-最新优惠 -->
-    <div id="save-money-meun">
+    <div class="save-money" id="save-money">
       <!-- 省钱控-最新优惠模板的坑 -->
     </div>
 
+    <div class="page" id="btn-page">
+      <div class="up-page fl">
+        <a href="#" id="goprevious">上一页</a>
+      </div>
+      <div class="center fl">
+        <select name="" id="select-btn">
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="next-page fr">
+        <a href="#" id="gonext">下一页</a>
+      </div>
+    </div>
     <div class="ct_menu">
       <a href="javascript:;">
         首页
@@ -63,49 +76,30 @@
   </div>
   <!-- 省钱控-最新优惠模板 -->
   <script type="text/template" id="save-money-tpl">
-    <div class="save-money">
-      <ul>
-        {{ each result sm i }}
-        <li class="clearfix">
-          <a href="javascript:;">
-            <div class="pic ">
-              {{@ sm.productImg2 }}
+    <ul>
+      {{ each $data sm i }}
+      <li class="clearfix">
+        <a href="javascript:;">
+          <div class="pic ">
+            {{@ sm.productImgSm }}
+          </div>
+          <div class="info">
+            <div class="title">
+              {{ sm.productName }}
+              <span>{{ sm.productPinkage }}元包邮</span>
             </div>
-            <div class="info">
-              <div class="title">
-                {{ sm.productName }}
-                <span>{{ sm.productPinkage }}元包邮</span>
-              </div>
-              <div class="other">
-                <span class="mall"> {{ sm.productFrom }} | {{ sm.productTime }}</span>
-                <span class="comment">
-              <i class="icon-comment"></i>
+            <div class="other">
+              <span class="mall"> {{ sm.productFrom }} | {{ sm.productTime }}</span>
+              <span class="comment">
+              <i class="iconfont icon-pinglun"></i>  
               0
             </span>
-              </div>
             </div>
-          </a>
-        </li>
-        {{ /each }}
-      </ul>
-    </div>
-
-    <!-- 上下一页按钮 -->
-    <div class="page" id="btn-page">
-      <div class="up-page fl">
-        <a href="javascript:;">上一页</a>
-      </div>
-      <div class="center fl">
-        <select name="" id="">
-          <%for(var i=1; i<=totalPage; i++){%>
-          <option value="<%= i %>"><%= i+"/"+totalPage %></option>
-          <%}%>
-        </select>
-      </div>
-      <div class="next-page fr">
-        <a href="javascript:;" data-id="{{ pagesize }}">下一页</a>
-      </div>
-    </div>
+          </div>
+        </a>
+      </li>
+      {{ /each }}
+    </ul>
   </script>
   <!-- 引入脚本 -->
   <script src="./lib/js/jquery/jquery.js"></script>

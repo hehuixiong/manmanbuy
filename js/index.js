@@ -14,19 +14,36 @@ $.get("http://139.199.192.48:9090/api/getindexmenu", function (data) {
 })
 
 
-
 /**
  * 折扣商品列表-数据渲染
  */
 $.get('http://139.199.192.48:9090/api/getmoneyctrl', function (data) {
   $("#jxhdc-list").html(template('jxhdc-list-tpl', data.result));
-  console.log(data)
 })
 
 
 // 点击回到顶部
-$("#returnTop").on("click", function () {
+$("#returnTop,.returnTop").on("click", function () {
   $("html,body").animate({
     scrollTop: 0
   }, 500);
+});
+
+/* 滚动至200高度的时候显示回到顶部-否则隐藏 */
+window.onscroll = function () {
+  var srcollTop = $(document).scrollTop();
+  if (srcollTop >= 200) {
+    $(".returnTop").fadeIn(1000);
+  } else {
+    $(".returnTop").fadeOut(1000);
+  }
+}
+
+
+$(document).ajaxStart(function () {
+  // $(".auto-loading").show();
+  alert("111")
+});
+$(document).ajaxStop(function () {
+  $(".auto-loading").hide();
 });

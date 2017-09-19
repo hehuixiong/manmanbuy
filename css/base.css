@@ -245,3 +245,11 @@ footer .footer div a:nth-child(1) {
 footer .footer div a {
   display: inline;
 }
+.auto-loading {
+  display: none;
+}
+.auto-loading img {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+}

@@ -246,6 +246,14 @@ footer .footer div a:nth-child(1) {
 footer .footer div a {
   display: inline;
 }
+.auto-loading {
+  display: none;
+}
+.auto-loading img {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+}
 /* 搜索框 */
 .view {
   /* 分类导航 */
@@ -273,6 +281,7 @@ footer .footer div a {
   width: 90%;
   padding-left: 5%;
   font-size: 16px;
+  overflow: hidden;
 }
 .view .search .search-btn input {
   -webkit-appearance: none;
@@ -397,6 +406,24 @@ footer .footer div a {
   margin: 10px;
   border: 1px solid #dddddd;
   border-radius: 4px;
+}
+.view .app-down {
+  position: fixed;
+  bottom: 60px;
+  right: 0px;
+}
+.view .app-down a img {
+  width: 60px;
+  height: 67px;
+}
+.view .returnTop {
+  position: fixed;
+  z-index: 999;
+  bottom: 10px;
+  right: 0px;
+}
+.view .returnTop i {
+  font-size: 45px;
 }
 /* 省钱控-最新优惠 */
 .head {
