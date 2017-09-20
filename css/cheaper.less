@@ -1,10 +1,14 @@
 @import "./base.less";
 
+// body{
+//     background-color: white !important;
+// }
 // 头部
 .header{
     width: 100%;
     height: 44px;
     background-color: rgb(255, 132, 29);
+    text-align: center;
     .back{
         float: left;
         font-size: 14px;
@@ -13,17 +17,20 @@
         margin-left:5px;
     }
     h1{
-        width: 30%;
+        margin: 0;
+        padding: 0;
+        width:100%;
         text-align: center;
         font-size: 24px;
         font-family: '微软雅黑';
         line-height: 44px;
         float: left;
         display: block;
-        margin-left: 170px;
+        // margin-left: 170px;
         color:rgb(255, 255, 255);
         font-family: '微软雅黑';
         font-weight: 900;
+        text-align: center;
     }
     .home{
         width: 20%;
@@ -36,11 +43,16 @@
 }
 // small
 .small{
-    height: 40px;
+    height: 40px;   
     font-size: 12px;
     text-align: center;
     line-height: 40px;
     color:rgb(153, 153, 153);
+    padding-left: 55px;
+    a{
+        display: inline !important;
+        color:#999999;
+    }
 }
 // 中间被渲染的部分
 .center{

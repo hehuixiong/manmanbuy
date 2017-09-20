@@ -1,13 +1,12 @@
 
 var couponId = getSearch('couponid');
 $.get('http://139.199.192.48:9090/api/getcouponproduct',{couponid:couponId},function(data){
-  console.log(data);
+  // console.log(data);
       $('#center-coupon').html(template('coupontpl',data.result));
-    $('#center-coupon').on('click',function(){
-    $('.bibi1').show();
-    console.log($('#center-coupon'));
-    // $(this)
-})
+      $('#center-coupon').on('click',function(){
+      $('.bibi1').show();
+      console.log($('#center-coupon'));
+  });
 });
 
 // 切割数据的方法

@@ -1,135 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-     <meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--<link rel="stylesheet" href="../lib/css/bootstrap/bootstrap.min.css">-->
+    <!-- <link rel="stylesheet" href="../lib/css/bootstrap/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../css/running.css">
-      <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <title>Document</title>
 </head>
+
 <body>
-        <!--头部         -->
+    <!--头部         -->
     <header class="clearfix">
-      <div class="logo">
-        <a href="./index.html" title="慢慢买比价网--手机版">
-          <img src="../update/header_logo.png" alt="慢慢买比价网--手机版">
-        </a>
-      </div>
-      <div class="appdown clearfix">
-        <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap">
-          <img src="../update/header_app.png" alt="手机app下载">
-        </a>
-      </div>
+        <div class="logo">
+            <a href="./index.html" title="慢慢买比价网--手机版">
+                <img src="../images/header_logo.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="appdown clearfix">
+            <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap">
+                <img src="../images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
     </header>
 
-<!--搜索-->
-<div class="search clearfix">
-    <div class="search_main clearfix">
-       <div class="search_main_one clearfix"><input type="search" placeholder="请输入你想要的商品"/></div>
-       <div class="search_main_two clearfix"><input type="submit" value="搜索"></div>
+    <!-- 搜索框 -->
+    <div class="search">
+        <div class="search-txt">
+            <input type="search" name="" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search-btn">
+            <input type="submit" value="搜索">
+        </div>
     </div>
-</div>
-<!--主体渲染的-->
-<div class="all">
-    <ul>
-        <li><a href="javascript:;" class="active">综合</a></li>
-        <li><a href="javascript:;">销量</a></li>
-        <li><a href="javascript:;">价格</a></li>
-        <li><a href="javascript:;">筛选</a></li>
-    </ul>
-</div>
+    <!--主体渲染的-->
+    <div class="all">
+        <ul>
+            <li><a href="javascript:;" class="active">综合</a></li>
+            <li><a href="javascript:;">销量</a></li>
+            <li><a href="javascript:;">价格</a></li>
+            <li><a href="javascript:;">筛选</a></li>
+        </ul>
+    </div>
 
-<!--主体下面的内容-->
-<div class="contain clearfix">
-    <ul id="contain_main">
-       <!--主体下面的鞋子的内容-->
-    </ul>
-    <!--小部分-->
-<div class="running_small">
-<!--坑-->
-</div>
-</div>
+    <!--主体下面的内容-->
+    <div class="contain clearfix">
+        <ul id="contain_main">
+            <!--主体下面的鞋子的内容-->
+        </ul>
+        <!--小部分-->
+        <div class="running_small">
+            <!--坑-->
+        </div>
+    </div>
 
-<!--主体-->
-<div class="center clearfix">
-<a href="javascript:;">首页</a>
-<a href="javascript:;">&nbsp;>&nbsp;</a>
-<a href="javascript:;">优惠券</a>
-</div>
+    <!--主体-->
+    <div class="center clearfix">
+        <a href="javascript:;">首页</a>
+        <a href="javascript:;">&nbsp;>&nbsp;</a>
+        <a href="javascript:;">优惠券</a>
+    </div>
 
-<!-- 底部 -->
+    <!-- 底部 -->
     <footer class="clearfix">
-      <div class="foot-top">
-        <a href="javascript:;">登录</a>
-        <a href="javascript:;">注册</a>
-        <a href="javascript:;">
+        <div class="foot-top">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;">
           
           返回顶部
         </a>
-      </div>
-      <div class="footer">
-        <div>
-          <a href="javascript:;">手机APP下载</a>
-          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
         </div>
-        <div>m.manmanbuy.com</div>
-      </div>
-    </footer>
-  </div>
-
-
-<!--定位-->
-<div class="position">
-    <a href="javascript:;">
-        <img src="../update/dingwei.png">
-        </a>
-</div>
-
-
-
-<script type="text/tpl" id="containtpl">
-<!--productId  商品ID-->
-       {{ each $data product i}}
-          <li>
-             <div class="photo">
-                  <img src="">{{@ product.productImg }}
-             </div>
-             <div class="constructor">
-                  <a href="../html/comment.html?productid={{ product.productId }}">{{ product.productName }}</a>
-                  <a href="javascript:;">{{ product.productPrice }}</a>
-                  <a href="javascript:;">
-                   <span>{{ product.productQuote }}</span>
-                   <span>{{ product.productCom }}</span>
-                  </a>
+        <div class="footer">
+            <div>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
             </div>
-     </li>
-     {{ /each }}
-</script>
+            <div>m.manmanbuy.com</div>
+        </div>
+    </footer>
+    </div>
 
-<script id="selecttpl" type="text/tpl">
-            <ul>
-    <li><a href="javascript:;"><span class="pre">上一页</span></a></li>
-    <li><a href="javascript:;">
-      <select name="" id="selectBig">
+
+    <!--定位-->
+    <div class="position">
+        <a href="javascript:;">
+            <img src="../images/dingwei.png">
+        </a>
+    </div>
+
+
+
+    <script type="text/tpl" id="containtpl">
+        <!--productId  商品ID-->
+        {{ each $data product i}}
+        <li>
+            <div class="photo">
+                <img src="">{{@ product.productImg }}
+            </div>
+            <div class="constructor">
+                <a href="../html/comment.html?productid={{ product.productId }}">{{ product.productName }}</a>
+                <a href="javascript:;">{{ product.productPrice }}</a>
+                <a href="javascript:;">
+                    <span>{{ product.productQuote }}</span>
+                    <span>{{ product.productCom }}</span>
+                </a>
+            </div>
+        </li>
+        {{ /each }}
+    </script>
+
+    <script id="selecttpl" type="text/tpl">
+        <ul>
+            <li><a href="javascript:;"><span class="pre">上一页</span></a></li>
+            <li>
+                <a href="javascript:;">
+                    <select name="" id="selectBig">
         {{ each arr value i }}
         <option value="{{ (i+1) }}">{{ (i+1) }}/{{ totalpage }}</option>
       {{ /each }}
       </select>
-      </a>
-      </li>
-    <li><a href="javascript:;"><span class="next1">下一页</span></a></li>
-  </ul>
-</script>
+                </a>
+            </li>
+            <li><a href="javascript:;"><span class="next1">下一页</span></a></li>
+        </ul>
+    </script>
 
 
-<script src="../lib/js/jquery/jquery.js"></script>
-<!--<script src="../lib/js/bootstrap/bootstrap.js"></script>-->
-<script src="../lib/js/template/template-web.js"></script>
-<script src="../js/running.js"></script>
+    <script src="../lib/js/jquery/jquery.js"></script>
+    <!--<script src="../lib/js/bootstrap/bootstrap.js"></script>-->
+    <script src="../lib/js/template/template-web.js"></script>
+    <script src="../js/running.js"></script>
 </body>
+
 </html>

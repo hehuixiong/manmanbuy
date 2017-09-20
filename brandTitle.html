@@ -7,12 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <title>品牌大全页面</title>
-    <link rel="stylesheet" href="../../lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/baicaijia/branchNav.css">
-    <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/baicaijia/brandTitle.css">
+
 </head>
 
 <body>
@@ -20,13 +17,13 @@
     <div class="backhead">
         <!-- 右侧慢慢买logo -->
         <div class="back">
-            <a href="http://m.manmanbuy.com/" class="">
-                <img src="../../images/header_logo.png" alt="">
+            <a href="./index.html" class="">
+                <img src="./images/header_logo.png" alt="">
             </a>
         </div>
         <!-- 左侧app下载按钮 -->
         <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia
-" class="download"><img src="../../images/baicaijia/header_app.png" alt=""></a>
+" class="download"><img src="./images/baicaijia/header_app.png" alt=""></a>
     </div>
 
     <!-- 搜索栏 -->
@@ -35,12 +32,11 @@
         <button class="searchBtn">搜索</button>
     </div>
 
-
     <!-- 主体部分 -->
     <div class="main">
         <!-- 底部首页导航条 -->
         <div class="index_nav">
-            <a href="http://m.manmanbuy.com/">首页 ></a>
+            <a href="./index.html">首页 ></a>
             <span>品牌大全</span>
         </div>
 
@@ -88,17 +84,17 @@
     <script id="nav_branchdata" type="text/template">
         {{ each $data item i }}
         <li>
-            <a class='brandTitle' data-brandTitleId='{{ item.brandTitleId }}' href="./branchProductList.html?brandTitleId={{ item.brandTitleId }}">
+            <a class='brandTitle' data-brandTitleId='{{ item.brandTitleId }}' href="./html/baicaijia/branchProductList.html?brandTitleId={{ item.brandTitleId }}">
                 {{ item.brandTitle }}    
             </a>
         </li>
         {{ /each }}
     </script>
 
-    <script src="../../lib/js/jquery/jquery.js"></script>
-    <script src="../../lib/js/template/template-web.js"></script>
-    <script src="../../js/baicaijia/itcastEvent.js"></script>
-    <script src="../../js/baicaijia/branchNav.js"></script>
+    <script src="./lib/js/jquery/jquery.js"></script>
+    <script src="./lib/js/template/template-web.js"></script>
+    <script src="./js/baicaijia/itcastEvent.js"></script>
+    <script src="./js/baicaijia/brandTitle.js"></script>
 </body>
 
 </html>

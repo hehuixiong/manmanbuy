@@ -11,7 +11,7 @@ $.get('http://139.199.192.48:9090/api/getbrandtitle', function(data) {
             var brantitleid = li.children[0].getAttribute('data-brandTitleId');
             // console.log(brantitleid);
             localStorage.setItem('navTitleInfo', li.children[0].innerhtml);
-            location.href = './branchProductList.html?brandTitleId=' + brantitleid;
+            location.href = './html/baicaijia/branchProductList.html?brandTitleId=' + brantitleid;
         });
     }
 
