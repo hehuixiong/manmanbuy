@@ -1,3 +1,4 @@
+@import '../lib/fonts/iconfont.css';
 /*css 初始化 */
 @import '../lib/fonts/iconfont.css';
 html {
@@ -254,6 +255,38 @@ footer .footer div a {
   height: 32px;
   margin: 0 auto;
 }
+.head-top {
+  background: #ff841d;
+  position: relative;
+}
+.head-top .left {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  font-size: 22px;
+  color: #fff;
+  font-family: '黑体';
+  font-weight: bold;
+}
+.head-top .left a i {
+  font-size: 25px;
+}
+.head-top > h1 {
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.head-top .appdown {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+.head-top .appdown a img {
+  width: 34px;
+  height: 34px;
+}
 /* 搜索框 */
 .view {
   /* 分类导航 */
@@ -430,16 +463,16 @@ footer .footer div a {
   background: #ff841d;
   position: relative;
 }
-.head .left {
+.head div.left {
   position: absolute;
   left: 12px;
-  top: 7px;
+  top: 8px;
   font-size: 22px;
   color: #fff;
   font-family: '黑体';
   font-weight: bold;
 }
-.head .left a i {
+.head div.left a i {
   font-size: 25px;
 }
 .head > h1 {

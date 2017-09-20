@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- ie 选择最高版本内核　 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>国内折扣--手机版</title>
+  <!-- <link rel="stylesheet" href="./lib/css/bootstrap/bootstrap.min.css">  -->
+  <link rel="stylesheet" href="./css/discount.css">
+
+</head>
+
+<body>
+  <div class="view">
+    <!-- 网页头部 -->
+    <div class="head-top">
+      <div class="left">
+        <a href="index.html">
+                <i class="iconfont icon-icon"></i>   
+            </a>
+      </div>
+      <h1>国内折扣</h1>
+    </div>
+
+    <div class="container">
+      <!-- 国内折扣模板的坑 -->
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+      <div class="foot-top">
+        <a href="./login.html">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" id="returnTop">
+          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </div>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 国内折扣模板 -->
+  <script type="text/template" id="content-tpl">
+    {{ each $data li i }}
+    <div class="cu-content">
+        <h3 class="title"> {{ li.productName }} </h3>
+        <h4>{{ li.productPinkage }}元包邮（需用券）</h4>
+        <div class="info">
+          <span class="mall">{{ li.productFrom }}</span>
+          <span class="addtime" style="margin-right: 4px;">09-19 22:14</span> <span class="author">{{ li.productTips }}</span>
+
+          <span class="author"><a href="#newcomment" style="color:#4682c5;">{{ li.productComCount }}</a></span>
+
+        </div>
+        <div class="content clearfix">
+
+          <div class="picwrap">{{@ li.productImgLg }}</div>
+
+          <div class="conn">
+            <!--内容开始-->
+            <p>
+              {{ li.productInfo }}
+            </p>
+            <p>
+              <br>
+            </p>
+            <p>
+              {{ li.productInfo1 }}<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1818112330&amp;activityId=bd74373caf0d41279487bb5e4b1f6eff"
+                target="_blank">20元优惠券</a>{{ li.productInfo2 }}
+            </p>
+            <p>
+              <br>
+            </p>
+            <p style="text-align:center;">
+              {{@ li.productImg2 }}
+            </p>
+            <!--内容结束-->
+          </div>
+        </div>
+
+        <br>
+
+        <div class="golink"><a href="redirect.aspx?webid=0&amp;tourl=https%3a%2f%2fs.click.taobao.com%2fpCdLpaw&amp;y=cu&amp;cxid=223309" target="_blank"
+            class="a-gobuy"><i class="icon-gobuy"></i>前往购买</a>
+
+
+        </div>
+      </div>
+
+      <div class="cu-content-pl ui-border-t" id="comment">
+        <div class="tit">发表评论</div>
+        <div class="reply">
+          <div class="form">
+            <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+            <input name="ctl00$ContentBody$lbl_fbr" type="hidden" id="ctl00_ContentBody_lbl_fbr" value="手机端网友116***165">
+            <input name="ctl00$ContentBody$hid_name" type="hidden" id="ctl00_ContentBody_hid_name" value="高露洁 劲白牙膏 120g*8支 ">
+            <div class="ctrl">
+              <input type="submit" name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp">
+            </div>
+          </div>
+        </div>
+
+        <div class="tit" id="newcomment">最新评论</div>
+        <div class="list" id="listnew">
+          <ul>
+
+            <li class="ui-border-b">
+              <div class="userimg"><img src="http://bbs.manmanbuy.com/images/face/none.gif"></div>
+              <div class="con">
+                <div class="name clearfix">
+                  <div class="username">Hero</div>
+                  <div class="time">{{ li.productTime }}</div>
+                </div>
+                <div class="content">个人感觉，不好</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="Page_loading" style=" display:none;">
+        <em><img src="http://cu.manmanbuy.com/images/loading.gif" width="32" height="32"></em><span></span>
+      </div>
+      {{ /each }}
+  </script>
+
+  <!-- 引入脚本 -->
+  <script src="./lib/js/jquery/jquery.js"></script>
+  <script src="./lib/js/jquery-form/src/jquery.form.js"></script>
+  <script src="./lib/js/template/template-web.js"></script>
+  <script src="./js/discount.js"></script>
+</body>
+
+</html>

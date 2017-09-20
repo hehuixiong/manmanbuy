@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/ppFile.css">
+      <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Document</title>
+</head>
+<body>
+
+        <!--头部         -->
+    <header class="clearfix">
+      <div class="logo">
+        <a href="./index.html" title="慢慢买比价网--手机版">
+          <img src="../update/header_logo.png" alt="慢慢买比价网--手机版">
+        </a>
+      </div>
+      <div class="appdown clearfix">
+        <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap">
+          <img src="../update/header_app.png" alt="手机app下载">
+        </a>
+      </div>
+    </header>
+
+
+<!--主体渲染的-->
+<div class="main clearfix" >
+    <ul id="couponFile">
+     <!--主体渲染的坑-->
+    </ul>
+</div>
+<script type="text/tpl" id="ppFile-tpl">
+     {{ each $data file i }}
+           <li>
+             <a class="bibi" href="./cheaper/cheaper.html?couponid={{file.couponId}}">
+                 <img src="{{@ file.couponImg }}">
+                 <span>{{ file.couponTitle }}</span>
+            </a>
+          </li>
+          {{ /each }}
+</script>
+<!--主体-->
+<div class="center clearfix">
+<a href="javascript:;">首页</a>
+<a href="javascript:;">&nbsp;>&nbsp;</a>
+<a href="javascript:;">优惠券</a>
+</div>
+
+<!-- 底部 -->
+    <footer class="clearfix">
+      <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+          
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </div>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
+  </div>
+
+
+<!--定位-->
+<div class="position">
+    <a href="javascript:;">
+        <img src="../update/dingwei.png">
+        </a>
+</div>
+
+
+
+
+<script src="../lib/js/jquery/jquery.js"></script>
+<script src="../lib/js/bootstrap/bootstrap.js"></script>
+<script src="../lib/js/template/template-web.js"></script>
+<script src="../js/ppFile.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+  <meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- ie 选择最高版本内核　 -->
+  <title>慢慢买-比价</title>
+  <!--<link rel="stylesheet" href="../../lib/css/bootstrap/bootstrap.min.css">-->
+  <link rel="stylesheet" href="../../css/cheaper.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <div class="back"><a href="../ppFile.html?couponid={{ couponId }}"><</a></div>
+    <h1>肯德基优惠券</h1>
+    <div class="home"><a href="javascript:;"></a></div>
+</div>
+<!--small-->
+  <div class="bibi-one" style="position:fixed;z-index:999; top:0;left:0;width:100%;height: 100%; background: #000; display: none">
+  </div>
+<div class="small">
+  --点餐前出示手机中的优惠券&nbsp;>&nbsp;即可享受优惠--
+</div>
+
+<!--中间被渲染的-->
+<div class="center clearfix">
+    <ul  id="center-coupon">
+     <!--中间的坑-->
+    </ul>
+</div>
+<!-- 底部 -->
+    <footer>
+      <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </div>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
+  </div>
+<!--定位-->
+<div class="position">
+    <a href="javascript:;">
+        <img src="../update/dingwei.png">
+        </a>
+</div>
+
+<script id="coupontpl" type="text/tpl">
+{{ each $data coupon i }}
+ <li>
+        <a href="javascript:;" data-index="{{ coupon.couponId }}">
+          <div class="center_photo">
+            <img src="">{{@ coupon.couponProductImg }}
+          </div>
+          <div class="center_right">
+            <div class="tit">
+              <span> C<i>19</i>  {{ coupon.couponProductName }}</span>
+              <div class="center_small">
+                <i>{{ coupon.couponProductPrice }}</i>
+              </div>
+            </div>
+            <div class="time">{{ coupon.couponProductTime }}</div>
+          </div>
+        </a>
+      </li>
+
+{{ /each }}
+</script>
+<script src="../../lib/js/jquery/jquery.js"></script>
+<!--<script src="../../lib/js/bootstrap/bootstrap.js"></script>-->
+<script src="../../lib/js/template/template-web.js"></script>
+<script src="../../js/baicaijia/cheaper.js"></script>
+</body>
+</html>
+
+
+
+
+

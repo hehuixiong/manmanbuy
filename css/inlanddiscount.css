@@ -1,0 +1,290 @@
+/*css 初始化 */
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img,
+input,
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  /*在低版本的ie浏览器里面不支持*/
+  outline-style: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun", "微软雅黑";
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+/*禁止手动修改大小*/
+textarea {
+  resize: none;
+}
+/*去掉图片底部默认空白缝隙*/
+img {
+  border: 0;
+  vertical-align: middle;
+}
+/*合并外连线*/
+table {
+  /*表格的单元格边框默认是不会重合的，这个属性可以让表格的边框重合在一起，看起来更加细一些*/
+  border-collapse: collapse;
+}
+body {
+  font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+  /*unitedCode的写法，宋体的写法*/
+  color: #666;
+  background: #fff;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+/*公共类*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.hide {
+  display: none;
+}
+.col-red {
+  color: #F10215 !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  line-height: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+input {
+  outline: none;
+  border: none;
+  display: block;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background: #efefef;
+}
+.zhekou_nav {
+  background-color: #ff841d;
+  width: 100%;
+  height: 44px;
+  color: #fff;
+  position: relative;
+}
+.zhekou_back {
+  position: absolute;
+  width: 50px;
+  left: 10px;
+  font-size: 20px;
+  top: 12px;
+}
+.zhekou_back a {
+  color: #fff;
+}
+.zhekou_nav h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  line-height: 44px;
+}
+.zhekou_nav .home {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+.zhekou_nav .home a {
+  color: #fff;
+  font-size: 20px;
+}
+.zhekou_show {
+  background-color: #fff;
+  margin: 0px auto;
+  text-align: left;
+  font-size: 14px;
+}
+.zhekou_show ul {
+  display: table;
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+}
+.zhekou_show ul li {
+  width: 50%;
+  padding: 10px 0px 0px 10px;
+  border: 1px solid #eee;
+  vertical-align: middle;
+  float: left;
+}
+.img {
+  margin: 10px auto;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+}
+.zhekou_show .title {
+  color: #333;
+  padding: 0px 8px;
+  line-height: 18px;
+  text-align: left;
+  height: 36px;
+  overflow: hidden;
+  font-weight: 900;
+}
+.zhekou_show .subtit {
+  color: #ff6c00;
+  margin-top: 4px;
+  font-size: 14px;
+  padding: 0 8px;
+  text-align: left;
+  overflow: hidden;
+  height: 18px;
+  line-height: 18px;
+}
+.zhekou_show .info {
+  padding: 6px 8px;
+}
+.info {
+  font-size: 14px;
+  line-height: 24px;
+}
+.zhekou_show .mall {
+  color: #a1a1a1;
+  font-size: 12px;
+  text-align: left;
+}
+.foot-top {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+  clear: both;
+}
+.foot-top a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 30%;
+  position: relative;
+}
+.foot-top a img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 70%;
+  top: 27%;
+}
+.footer {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+.footer a {
+  display: inline-block;
+}
+.loadMore {
+  text-align: center;
+  margin-top: 10px;
+}

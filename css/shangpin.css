@@ -1,0 +1,351 @@
+/*css 初始化 */
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img,
+input,
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  /*在低版本的ie浏览器里面不支持*/
+  outline-style: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun", "微软雅黑";
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+/*禁止手动修改大小*/
+textarea {
+  resize: none;
+}
+/*去掉图片底部默认空白缝隙*/
+img {
+  border: 0;
+  vertical-align: middle;
+}
+/*合并外连线*/
+table {
+  /*表格的单元格边框默认是不会重合的，这个属性可以让表格的边框重合在一起，看起来更加细一些*/
+  border-collapse: collapse;
+}
+body {
+  font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+  /*unitedCode的写法，宋体的写法*/
+  color: #666;
+  background: #fff;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+/*公共类*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.hide {
+  display: none;
+}
+.col-red {
+  color: #F10215 !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  line-height: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+input {
+  outline: none;
+  border: none;
+  display: block;
+}
+.head-top div.left {
+  top: 14px;
+}
+.zhekou_nav {
+  background-color: #ff841d;
+  width: 100%;
+  height: 44px;
+  color: #fff;
+  position: relative;
+}
+.zhekou_back {
+  position: absolute;
+  width: 50px;
+  left: 10px;
+  font-size: 20px;
+  top: 12px;
+  z-index: 2;
+}
+.zhekou_back a {
+  color: #fff;
+}
+.zhekou_nav h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  line-height: 44px;
+}
+.zhekou_nav .home {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+.zhekou_nav .home a {
+  color: #fff;
+  font-size: 20px;
+}
+.shangpincon {
+  margin: 0 auto;
+}
+.cu-content {
+  padding: 4px 10px;
+  background-color: #fff;
+}
+.cu-content h3 {
+  font-size: 18px;
+  margin: 10px auto 5px auto;
+  font-weight: 800;
+  text-align: left;
+  color: #5a5a5a;
+  line-height: normal;
+}
+.cu-content h4 {
+  font-size: 15px;
+  color: #ff6c00;
+  display: block;
+}
+.cu-content .info {
+  margin: 12px auto;
+  color: #999;
+  font-size: 12px;
+}
+.cu-content .info span {
+  margin: 0px 4px;
+}
+.cu-content .picwrap {
+  width: 120px;
+  float: right;
+  margin: 12px auto auto 10px;
+  overflow: hidden;
+}
+.cu-content .conn {
+  font-size: 16px;
+  line-height: 24px;
+  color: #606060;
+  padding-bottom: 20px;
+}
+.cu-content .golink a {
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  margin: 20px 10px;
+  background: #FF9000;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+.cu-content-pl {
+  background-color: #fff;
+}
+.cu-content-pl .tit {
+  font-size: 16px;
+  padding: 6px 8px;
+}
+.cu-content-pl .reply {
+  padding: 6px 8px;
+}
+.cu-content-pl .reply .form {
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+  background-color: #fff;
+  position: relative;
+  width: 98%;
+  margin: 0px auto;
+}
+.cu-content-pl .reply .form textarea {
+  width: 100%;
+  border: none;
+  line-height: 22px;
+  font-size: 14px;
+  outline: 0;
+  color: #666;
+  height: 68px;
+}
+.cu-content-pl .reply .form .ctrl {
+  background-color: #fbfbfb;
+  height: 36px;
+  margin-left: -4px;
+  border-top: solid 1px #f2f2f2;
+}
+.cu-content-pl .reply .form .ctrl input {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  background: #ff841d;
+  border: 2px solid #ff841d;
+  border-left: none;
+  border-top: none;
+  padding: 0px;
+  width: 100px;
+  height: 39px;
+  color: #fff;
+  outline: 0;
+  border-radius: 0 0 2px 0;
+  font-size: 16px;
+}
+.shangpincon .suoyin {
+  font-size: 14px;
+  padding: 20px 10px 0;
+  color: #808080;
+}
+.shangpincon .suoyin a {
+  display: inline-block;
+}
+.nav {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 36px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+.foot-top {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+  clear: both;
+}
+.foot-top a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 30%;
+  position: relative;
+}
+.foot-top a img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 70%;
+  top: 20%;
+}
+.footer {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+.footer a {
+  display: inline-block;
+}

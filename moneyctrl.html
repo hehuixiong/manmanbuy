@@ -7,12 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <title>慢慢买比价网--手机版</title>
-  <!-- <link rel="stylesheet" href="./lib/css/bootstrap/bootstrap.min.css"> -->
   <link rel="stylesheet" href="./css/index.css">
-  <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
@@ -31,12 +26,17 @@
         </a>
       </div>
     </div>
-
+    <!-- 显示加载图片 -->
+    <div class="auto-loading">
+      <img src="./images/loading.gif" alt="">
+    </div>
     <!-- 省钱控-最新优惠 -->
     <div class="save-money" id="save-money">
       <!-- 省钱控-最新优惠模板的坑 -->
     </div>
 
+
+    <!-- 上下翻页 -->
     <div class="page" id="btn-page">
       <div class="up-page fl">
         <a href="#" id="goprevious">上一页</a>
@@ -50,6 +50,7 @@
         <a href="#" id="gonext">下一页</a>
       </div>
     </div>
+
     <div class="ct_menu">
       <a href="javascript:;">
         首页
@@ -79,7 +80,7 @@
     <ul>
       {{ each $data sm i }}
       <li class="clearfix">
-        <a href="javascript:;">
+        <a href="./discount.html?productId={{ sm.productId }}">
           <div class="pic ">
             {{@ sm.productImgSm }}
           </div>
@@ -103,7 +104,6 @@
   </script>
   <!-- 引入脚本 -->
   <script src="./lib/js/jquery/jquery.js"></script>
-  <!-- <script src="./lib/js/bootstrap/bootstrap.js"></script> -->
   <script src="./lib/js/jquery-form/src/jquery.form.js"></script>
   <script src="./lib/js/template/template-web.js"></script>
   <script src="./js/moneyctrl.js"></script>

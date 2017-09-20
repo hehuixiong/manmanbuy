@@ -256,6 +256,9 @@ footer .footer div a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+img {
+  display: inline-block !important;
+}
 .backhead {
   position: relative;
   height: 50px;
@@ -289,7 +292,7 @@ footer .footer div a {
 .backhead .download img {
   margin: 0;
   padding: 0;
-  display: block;
+  display: inline-block !important;
   width: 34px;
   height: 34px;
 }

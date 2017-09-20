@@ -1,3 +1,4 @@
+@import '../lib/fonts/iconfont.css';
 /*css 初始化 */
 html {
   -webkit-font-smoothing: antialiased;
@@ -206,6 +207,7 @@ header .appdown a {
 header .appdown a img {
   max-height: 34px;
   max-width: 34px;
+  float: right;
   overflow: hidden;
 }
 /* 底部 */
@@ -252,4 +254,36 @@ footer .footer div a {
   width: 32px;
   height: 32px;
   margin: 0 auto;
+}
+.head-top {
+  background: #ff841d;
+  position: relative;
+}
+.head-top .left {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  font-size: 22px;
+  color: #fff;
+  font-family: '黑体';
+  font-weight: bold;
+}
+.head-top .left a i {
+  font-size: 25px;
+}
+.head-top > h1 {
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.head-top .appdown {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+.head-top .appdown a img {
+  width: 34px;
+  height: 34px;
 }

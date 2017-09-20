@@ -1,0 +1,309 @@
+@import '../base.less';
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot');
+  src: url('../../lib/fonts/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../lib/fonts/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// 品牌大全头部栏
+.backhead{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #ff841d;
+    text-align: center;
+    color:#fff;
+    overflow: hidden;
+    .back{
+        position: absolute;
+        left:0;
+        top:12px;
+        font-size: 16px;
+        .glyphicon-menu-left:before {
+            content: "\e257";
+        }
+        a{
+            padding-left: 16px;
+            margin-bottom: 23px;
+            height: 30px;
+            line-height: 30;
+            vertical-align: middle;
+            img{
+                height: 25px;
+            }
+        }
+    }
+    .download{
+        position: absolute;
+        right:10px;
+        top:8px;
+        img{
+        margin: 0;
+        padding: 0; 
+        display: block;
+        width: 34px;
+        height: 34px;
+        }
+    }
+}
+
+// 搜索栏
+.search{
+    margin: 10px auto;
+    width:100%;
+    padding: 0 10px;
+    position: relative;
+    font-size: 16px;
+    input{
+    font-size: 16px;
+        height: 30px;
+        width:100%;
+        background-color: #f1f1f1;
+        padding-left: 20px;
+        border-radius: 15px;
+    }
+    .searchBtn{
+        height: 30px;
+        width: 63px;
+        border-radius: 15px;
+        line-height: 30px;
+        position: absolute;
+        right: 10px;
+        top:0;
+        background-color: #ff841d;
+        color:white;
+    }
+}
+
+// 主体部分
+.main{
+    background-color: #f2f2f2;
+    // 首页导航条
+    .index_nav{
+        height: 36px;
+        line-height: 36px;
+        color: #5a5a5a;
+        background-color: #f8f8f8;
+        padding-left: 10px;
+        border-top: solid 1px #ebebeb;
+        border-bottom: 1px solid #ccc;
+        
+        a{
+            display: inline;
+        }
+    }
+    .hotBox{
+        .hot{
+            color:#874604;
+            font-size: 14px;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            border-bottom: 1px solid #dddddd;
+            border-top: 1px solid #dddddd;
+            font-weight: 600;
+        }
+    }
+    // 品牌标题
+    .branchTitle{
+        width: 100%;
+        ul{
+            li{
+                width: 100%;
+                padding: 10px;
+                border-bottom: 1px solid #e7e7e7;
+                background: url('../../images/shoppingNav/arrow_r.png')no-repeat right 10px center;
+                background-size: 9px;
+                a{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    i{
+                        background-color: #c9c9c9;
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        color:#fff;
+                        margin: 0 4px 0 0;
+                        font-size: 14px;
+                        line-height: 20px;
+                        text-align: center;
+                        vertical-align: top;
+                    }
+                    .inner{
+                        display: inline-block;
+                        height: 40px;
+                        p{
+                            font-size: 12px;
+                            color:#999999;
+                            margin-top: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 销量排行模块
+.model{
+    background-color: #f2f2f2;
+    .hd{
+        h3{
+            height: 36px;
+            line-height: 36px;
+            padding-left: 10px;
+            font-size: 14px;
+            border-top: 1px solid #c8c8c8;
+            border-bottom: 1px solid #c8c8c8;
+
+            a{
+                color:#874604;
+                font-weight: bold;
+                display: inline;
+            }
+        }
+    }
+
+    .branchProductList{
+        // margin-bottom: 20px;
+        li{
+            padding: 10px;
+            a{
+                .pic{
+                    float: left;
+                    img{
+                        display: inline-block;
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                .info{
+                    padding-left: 108px;
+                    p{
+                        color:#333;
+                        line-height: 22px;
+                        min-height: 44px;
+                    }
+                    .price{
+                        height: 25px;
+                        line-height: 25px;
+                        // margin-top: 4px;
+                        >em{
+                            font-size: 18px;
+                            color:#ea3900;
+                            vertical-align: middle;
+                        }
+                        .star1, .star2, .star3, .star4, .star5 {
+                            background-image: url('http://www.w3.org/2000/svg');
+                            display: inline-block;
+                        }
+                    }
+                    .others{
+                        font-size: 12px;
+                        color:#999;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .branchProductCom{
+        // margin-bottom: 20px;
+        li{
+            padding: 10px;
+            border-bottom:1px solid #c8c8c8; 
+            a{
+                .pic{
+                    float: left;
+                    img{
+                        display: inline-block;
+                        width: 80px;
+                        height: 80px;
+                    }
+                    
+                }
+                .tit{
+                        padding-left: 90px;
+                    }
+                .info{
+                    background-color: #f8f8f8;
+                    border: 1px solid #e7e7e7;
+                    padding: 10px;
+                    margin-top: 10px;
+                    .userName{
+                        color:#333;
+                        font-size: 14px;
+                        .comdate{
+                            float: right;
+                        }
+                    }
+                    .comment{
+                        margin-top: 10px;
+                        color: #000;
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// 底部
+  .footer{
+    overflow: hidden;
+    background-color: #f7f7f7;
+    padding-top: 0;
+    .col-xs-4{
+      border: 1px solid #d5d5d5;
+      border-collapse: collapse;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      a{
+        color:#5a5a5a;
+        display: inline-block;
+        img{
+            width:15px;
+            height: 15px;
+            margin-bottom: 3px;
+            display: inline-block;
+        }
+      }
+    }
+    .bottom{
+      text-align: center;
+      margin-top: 15px;
+      font-size: 12px;
+      a{
+        display: inline;    
+        color: #f00;
+        margin-right: 5px;
+      }
+      span{
+          color: #5a5a5a;
+      }
+      div{
+        padding-bottom: 15px;
+      }
+    }
+  }

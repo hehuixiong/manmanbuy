@@ -54,18 +54,16 @@
         <div class="branchTitle">
             <ul id="branch_ul">
                 <li>
-                    <a href="javascript:;">
+                    <a data-brandTitleId='' href="javascript:;">
                         平板电视十大品牌    
                     </a>
                 </li>
-
             </ul>
         </div>
     </div>
 
-
     <!-- 底部 -->
-    <!-- <footer class="footer clearfix">
+    <footer class="footer clearfix">
         <div class="row">
             <div class="col-xs-4">
                 <a href="javascript:;">登录</a>
@@ -74,7 +72,7 @@
                 <a href="javascript:;">注册</a>
             </div>
             <div class="col-xs-4">
-                <a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                <a class="last_a" href="#">返回顶部</a>
             </div>
         </div>
         <div class="bottom">
@@ -84,13 +82,13 @@
             </p>
             <div>m.manmanbuy.com</div>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- 主体导航窗口 -->
     <script id="nav_branchdata" type="text/template">
         {{ each $data item i }}
         <li>
-            <a href="javascript:;">
+            <a class='brandTitle' data-brandTitleId='{{ item.brandTitleId }}' href="./branchProductList.html?brandTitleId={{ item.brandTitleId }}">
                 {{ item.brandTitle }}    
             </a>
         </li>
@@ -99,6 +97,7 @@
 
     <script src="../../lib/js/jquery/jquery.js"></script>
     <script src="../../lib/js/template/template-web.js"></script>
+    <script src="../../js/baicaijia/itcastEvent.js"></script>
     <script src="../../js/baicaijia/branchNav.js"></script>
 </body>
 

@@ -37,8 +37,6 @@ $(function () {
 })
 
 
-
-
 //点击顶部菜单栏弹出选框
 $('#btn-list li').each(function (index) {
   $(this).click(function () {
@@ -76,10 +74,16 @@ function initpare(dom, eq) {
 initpare($("#price-list li"), 2);
 
 
-
 $(document).ajaxStart(function(){
   $(".auto-loading").show();
 });
 $(document).ajaxStop(function(){
   $(".auto-loading").hide();
+});
+
+// 点击回到顶部
+$("#returnTop,.returnTop").on("click", function () {
+  $("html,body").animate({
+    scrollTop: 0
+  }, 500);
 });

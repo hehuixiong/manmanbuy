@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>省钱快爆 --慢慢买</title>
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+    <link rel="stylesheet" href="./css/base.css">
+
+</head>
+
+<body>
+    <!--导航栏-->
+    <div class="head-top">
+        <div class="left">
+            <a href="index.html">
+          <i class="iconfont icon-icon"></i>   
+        </a>
+        </div>
+        <h1>国内折扣</h1>
+        <div class="appdown">
+            <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap">
+          <img src="./images/header_app.png" alt="手机app下载">
+        </a>
+        </div>
+    </div>
+    <!--商品列表-->
+    <div class="zhekou_show">
+        <ul id="data_ul">
+            <!-- 商品列表模板的坑 -->
+        </ul>
+
+        <!-- 显示加载图片 -->
+        <div class="auto-loading">
+            <img src="./images/loading.gif" alt="">
+        </div>
+
+        <a class="loadMore" href="javascript:;">点击显示更多</a>
+    </div>
+    <!--底部-->
+    <div class="zhekou_floor">
+        <div class="foot-top">
+            <a href="./login.html">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" style="width:40%;border:0;" id="returnTop">
+                <img src="./images/top.jpg"> 返回顶部
+            </a>
+        </div>
+        <div class="footer">
+            <div>
+                <a href="javascript:;" style="color:red;">手机APP下载</a>
+                <a href="javascript:;" style="color:#000;">慢慢买手机版</a> -- 掌上比价平台
+            </div>
+            <div>m.manmanbuy.com</div>
+        </div>
+    </div>
+</body>
+<!-- 商品数据的模板 -->
+<script id="list_data" type="text/template">
+    {{ each $data li i }}
+    <li>
+        <a data-productid='{{ li.productId }}' href="./shangpin.html?productid={{ li.productId }}">
+            <div class="img ">
+                {{@ li.productImg }}
+            </div>
+            <div class="title ">{{ li.productName }}</div>
+            <div class="subtit ">{{ li.productPrice }}</div>
+            <div class="info ">
+                <div class="mall ">{{ li.productFrom }}|{{ li.productTime }}</div>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+<script src="./lib/js/jquery/jquery.js "></script>
+<script src="./lib/js/template/template-web.js "></script>
+<script src="./js/inlanddiscount.js"></script>
+
+</html>

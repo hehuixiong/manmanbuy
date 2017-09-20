@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../lib/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/comment.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+</head>
+<body>
+<!-- logo+手机版app下载 -->
+<div class="m_top clearfix">
+    <div class="fl logo">
+        <a href="javascript:;" title="慢慢买比价网--手机版">
+            <img src="../update/header_logo.png" alt="慢慢买比价网--手机版"/>
+        </a>
+    </div>
+    <div class="fr app">
+        <a href="javascript:;" title="手机app下载">
+            <img src="../update/header_app.png" alt="手机app下载"/>
+        </a>
+    </div>
+</div>
+<!-- 搜索框 -->
+<div>
+    <div class="search1 clearfix">
+        <div class="searchtxt">
+            <input type="search" placeholder="请输入你想比价的商品"/>
+        </div>
+        <div class="searchbtn">
+            <input type="submit" value="搜索"/>
+        </div>
+    </div>
+</div>
+
+<!-- 电视 -->
+<div class="content">
+    <div class="nav_b">
+        <a href="javascript:;">首页</a>
+        >
+        <a href="javascript:;">电视</a>
+        >
+        <a href="javascript:;">电视详情</a>
+    </div>
+    <div class="tv" id="pic">
+
+    </div>
+</div>
+
+<!-- 比价购买 -->
+<div class="tab">
+    <ul class="row">
+        <li class="col-xs-4">比价购买</li>
+        <li class="col-xs-4">产品参数</li>
+        <li class="col-xs-4">优选评价</li>
+    </ul>
+</div>
+<!-- 渲染比价购买 -->
+<div class="plist" id="mt"></div>
+
+
+<!-- 实际价格 -->
+<div class="node">
+    * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+</div>
+
+<div class="pj_t">
+    <div>网友评论</div>
+</div>
+
+<!-- 评论渲染区域 -->
+<div class="pingl" id="table">
+    <!-- 评论的坑 -->
+</div>
+<div class="more">
+    <a href="javascript:;">查看更多评价</a>
+</div>
+
+<!-- 底部 -->
+<footer>
+    <div class="nav clearfix">
+        <ul>
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li>
+                <a id="toTop" href="javascript:;">
+                    <!--<img src="../../../img/top.jpg" alt=""/>-->
+                    返回顶部
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footerApp">
+        <span><a href="javascript:;">手机APP下载</a></span>
+        <span>慢慢买手机版</span>
+        <span class="three">--掌上比价平台</span>
+        <br>
+        <span>m.manmanbuy.com。</span>
+    </div>
+</footer>
+<!-- 底部广告部分 -->
+<div class="app_bar">
+    <a id="out" class="fix " href="javascript:;"></a>
+    <div class="mmp"></div>
+    <p class="title">慢慢买</p>
+    <p class="des">全网比价,查历史价格</p>
+    <a class="loat_btn" href="javascript:;">立即打开</a> 
+</div>
+
+<script type="text/tpl" id="tpl">
+   {{ each $data value i }}
+        <div class="text"> {{ value.productName }} </div>
+        <div class="pic"">
+            {{@ value.productImg}}
+            <a class="sc" href="javascript:;">
+                <img src="../update/main2.jpg" alt=""/>
+            </a>
+        </div>
+    {{ /each }}
+
+</script>
+
+
+
+<script type="text/tpl" id="md">
+    {{ each $data value i }}
+        <div class="jd">{{@value.bjShop}}</div>
+    {{ /each }}
+</script>
+
+<script type="text/tpl" id="pinglun">
+    {{ each $data value i }}
+        <div class="pj_list">
+        <div class="table">
+            <div class="time clearfix">
+                <span class="fl">{{ value.comName }}</span>
+                <span class="fr">{{ value.comTime }}</span>
+            </div>
+            <div class="jd clearfix">
+                <span class="fl xingx"></span>
+                <span class="fr">{{ value.comFrom }}</span>
+            </div>
+            <div class="pj_c">
+                <p>{{ value.comContent }}</p>
+            </div>
+            <div class="pj_c">
+                <a href="javascript:;">回复</a>
+            </div>
+        </div>
+    </div>
+    {{ /each }}
+</script>
+
+
+
+<script src="../lib/js/jquery/jquery.js"></script>
+<script src="../lib/js/bootstrap/bootstrap.js"></script>
+<script src="../lib/js/template/template-web.js"></script>
+<script src="../js/api3.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+  <meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- ie 选择最高版本内核　 -->
+  <title>慢慢买-比价</title>
+  <link rel="stylesheet" href="../lib/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bijiaSearch.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--头部-->         
+    <header class="clearfix">
+      <div class="logo">
+        <a href="./index.html" title="慢慢买比价网--手机版">
+          <img src="../update/header_logo.png" alt="慢慢买比价网--手机版">
+        </a>
+      </div>
+      <div class="appdown">
+        <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap">
+          <img src="../update/header_app.png" alt="手机app下载">
+        </a>
+      </div>
+    </header>
+<!--搜索-->
+<div class="search clearfix">
+    <div class="search_main clearfix">
+       <div class="search_main_one clearfix"><input type="search" placeholder="请输入你想要的商品"/></div>
+       <div class="search_main_two clearfix"><input type="submit" value="搜索"></div>
+    </div>
+</div>
+<!--主体-->
+<!--<form action="" method="" id="aspnetForm" name="aspnetForm">-->
+   <div id="aspnetForm" class="brief clearfix">
+     <!--大家电的坑-->
+
+   </div>
+<!--</form>-->
+<script type="text/tpl" id="getcategorytitle">
+{{ each $data value i }}
+  <div class="briefin">
+         <div class="fl_t">
+             <a href="javacript:;" class='down' data-index="{{ value.titleId }}">{{ value.title }}</a>
+         </div>
+         <ul class="fl_all smallTitle_{{ value.titleId }}" style="display:none">
+         </ul>
+  </div>
+      {{ /each }}
+</script>
+<script type="text/tpl" id="getcategory">
+    {{ each $data value i }}
+         <li><a href="/html/running.html?categoryid={{ value.categoryId }}">
+        {{ value.category }}
+        </a></li>
+    {{ /each }}
+        <!--<li><a href="javacript:;"></a></li>-->
+</script>
+<!-- 底部 -->
+    <footer>
+
+      <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">
+          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </div>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
+  </div>
+<!--定位-->
+<div class="position">
+    <a href="javascript:;">
+        <img src="../update/dingwei.png">
+        </a>
+</div>
+
+<script src="../lib/js/jquery/jquery.js"></script>
+<script src="../lib/js/bootstrap/bootstrap.js"></script>
+<script src="../lib/js/template/template-web.js"></script>
+<script src="../js/bijiaSearch.js"></script>
+</body>
+</html>
+
+
+
+
+

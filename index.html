@@ -9,10 +9,7 @@
   <title>慢慢买比价网--手机版</title>
   <!-- <link rel="stylesheet" href="./lib/css/bootstrap/bootstrap.min.css">  -->
   <link rel="stylesheet" href="./css/index.css">
-  <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 
 <body>
@@ -118,7 +115,7 @@
     <div class="area-item">
       <a href="{{ item.titlehref }}" data-id="{{ item.indexmenuId }}">
         <div class="pic">
-          {{@ item.img }}
+          {{@item.img }}
         </div>
         <div class="name">
           {{ item.name }}
@@ -131,7 +128,7 @@
   <script type="text/template" id="jxhdc-list-tpl">
     {{ each $data jxhdc i }}
     <li class="clearfix">
-      <a href="javascript:;">
+      <a href="./discount.html?productId={{ jxhdc.productId }}">
         <div class="pic ">
           <!-- <img src="./images/jxhdc-pic1.jpg" alt=""> -->
           {{@ jxhdc.productImgSm }}

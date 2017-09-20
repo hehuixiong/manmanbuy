@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+  <meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- ie 选择最高版本内核　 -->
+  <title>慢慢买-比价</title>
+  <link rel="stylesheet" href="../lib/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/htChange.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <div class="back"><a href="javascript:;"><</a></div>
+    <h1>海淘折扣</h1>
+    <div class="home"><a href="javascript:;"></a></div>
+</div>
+<!--主体-->
+<div class="main">
+    <div class="cu-list" id="htChange-code">
+        <ul >
+            <!--这是模板的坑-->
+          </ul>
+    </div>
+    <!--小部分-->
+<!--<div class="running_small">
+
+</div>-->
+
+</div>
+<!-- 翻页功能 -->
+
+
+
+<!-- 底部 -->
+    <footer>
+      <div class="foot-top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" onclick="height:0">
+          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+          返回顶部
+        </a>
+      </div>
+      <div class="footer">
+        <div>
+          <a href="javascript:;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+        </div>
+        <div>m.manmanbuy.com</div>
+      </div>
+    </footer>
+  </div>
+<!--定位-->
+<div class="position">
+    <a href="javascript:;">
+        <img src="../update/dingwei.png">
+        </a>
+</div>
+
+<script  id="htChange-tpl" type="text/tpl">
+    {{ each $data title i }}
+    <li class='clearfix code'  method="post" >
+                <a href="../html/comment1.html?productid={{ title.productId }}">
+                    <div class="pic1 clearfix">
+                    {{@ title.productImgSm }}
+                    </div>
+                    <div class="info clearfix">
+                        <div class="title">
+                          {{  title.productName }}
+                            <span>{{ title.productPrice }}</span>
+                        </div>
+                        <div class="other">
+                            <span class="mall">{{ title.productFrom }}</span>
+                            <span class="comment">
+                                {{ title.productComCount }}
+                                <i class="jj">....</i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{ /each }}
+</script>
+
+<!--<script id="selecttpl" type="text/tpl">
+            <ul>
+    <li><a href="javascript:;"><span class="pre">上一页</span></a></li>
+    <li><a href="javascript:;">
+      <select name="" id="selectBig">
+        {{ each arr value i }}
+        <option value="{{ (i+1) }}">{{ (i+1) }}/{{ totalpage }}</option>
+      {{ /each }}
+      </select>
+      </a>
+      </li>
+    <li><a href="javascript:;"><span class="next1">下一页</span></a></li>
+  </ul>
+</script>-->
+
+
+<script src="../lib/js/jquery/jquery.js"></script>
+<script src="../lib/js/bootstrap/bootstrap.js"></script>
+<script src="../lib/js/template/template-web.js"></script>
+<script src="../js/htChange.js"></script>
+</body>
+</html>
+
+
+
+
+

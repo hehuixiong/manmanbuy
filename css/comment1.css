@@ -1,0 +1,330 @@
+/* logo+手机版app下载 */
+body{
+    background-color: #f2f2f2;
+}
+.m_top{
+    background-color: #ff841d;
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.m_top>.logo{
+    padding: 12px;
+}
+.m_top>.logo>a>img{
+    max-height: 25px;
+    overflow: hidden;
+}
+.m_top .app{
+    padding: 7px;
+}
+.m_top .app a img{
+    max-height: 34px;
+    overflow: hidden;
+}
+/* 搜索框 */
+.search1{
+    border-bottom: 1px solid #e6e6e6;
+    height: 50px;
+    position: relative;
+    background-color: white;
+}
+.search1 .searchtxt{
+    padding: 10px;
+}
+.search1 .searchtxt input {
+    -webkit-appearance: none;
+    border: none;
+    background: #f1f1f1;
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    /*padding-left: 10px;*/
+    width: 90%;
+    padding-left: 5%;
+    font-size: 16px;
+}
+.search1 .searchbtn input{
+    background-color: #ff841d;
+    width: 63px;
+    color: #fff;
+    border: none;
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    line-height: 30px;
+}
+/*   */
+.content .nav_b{
+    height: 36px;
+    background-color: #ebebeb;
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+    font-size: 14px;
+}
+.content .nav_b a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+.tv{
+    padding: 10px 30px 10px 30px;
+    background-color: #fff;
+    height: 240px;
+}
+.tv .text{
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+}
+.tv .pic{
+    height: 160px;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+}
+.tv .pic img{
+    height: 170px;
+}
+.tv .pic .sc{
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+}
+.tv .pic .sc img{
+    width: 40px;
+    height: 40px;
+}
+
+/* 比价购买 */
+.tab{
+    margin-top: 20px;
+    width: 100%;
+    height: 34px;
+    font-size: 15px;
+    line-height: 34px;
+    overflow: hidden;
+    background-color: #fb0;
+    border-bottom: 1px solid #c14d00;
+    border-top: 1px solid #c14d00;
+}
+.tab ul{
+    margin: 0;
+}
+.tab ul li:nth-child(1){
+    background-color: #ff9000;
+}
+.tab ul li{
+    border-right: 1px solid #c14d00;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
+.plist{
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding: 14px 0;
+    font-size: 16px;
+}
+.plist a{
+    color: #5a5a5a;
+}
+
+/* 实际价格 */
+.node{
+    font-size: 12px;
+    color: #888;
+    padding: 8px 10px;
+    line-height: 18px;
+    background-color: white;
+}
+
+.pj_t{
+    border-top: 4px solid #7a7a7a;
+    margin-top: 5px;
+}
+.pj_t div{
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    overflow: hidden;
+    background: #dbdbdb;
+    font-size: 14px;
+    border-top: 1px solid #fff;
+}
+
+/* 评论渲染区域 */
+.pj_list{
+    font-size: 12px;
+    color: #666;
+    padding: 10px 10px 0 10px;
+    background-color: #fff;
+    margin-top: 1px;
+    line-height: 18px;
+}
+.pj_list .table{
+    width: 100%;
+    margin: 0;
+}
+.pj_list .table .jd .xingx{
+    display: inline-block;
+    background-size: 16px 16px;
+    width: 88px;
+    height: 18px;
+    vertical-align: middle;
+    /*background: url("../../../img/gnzk/下载.svg");*/
+}
+.pj_list .table .pj_c{
+    color: #000;
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 5px;
+}
+.pj_list .table .pj_c p{
+    margin: 0;
+}
+.pj_list .table .pj_c a{
+    font-size: 12px;
+    color: #999;
+}
+
+.more{
+    padding: 0 8px;
+    margin-top: 16px;
+}
+.more a{
+    display: block;
+    height: 32px;
+    background-color: #d4d4d4;
+    border-bottom: 1px solid #bababa;
+    box-shadow: 0 0 1px #666;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+    overflow: hidden;
+    color: #5a5a5a;
+}
+
+/* 底部 */
+.nav{
+    border-bottom: 1px solid #c4c4c4;
+    background-color: #efefef;
+    border-top: 1px solid #c4c4c4;
+    margin-top: 25px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+.nav li{
+    padding: 0;
+    border-right: 1px solid #c4c4c4;
+    width: 30%;
+    float: left;
+}
+.nav li:nth-child(3){
+    border-right: none;
+    width: 40%;
+}
+.nav li a{
+    color: #5a5a5a;
+}
+.nav li a img{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 2px;
+}
+.footerApp{
+    background-color: #efefef;
+    text-align: center;
+    padding: 15px 0;
+    color: #666;
+}
+.footerApp span{
+    font-size: 12px;
+    color: #666;
+}
+.footerApp span a{
+    color: red;
+}
+/* 底部广告部分 */
+.app_bar{
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: block;
+    height: 60px;
+    width: 100%;
+    background-color: #faf8f5;
+    transition: opacity .2s ease-out;
+}
+.app_bar .fix{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    padding: 38px 24px 20px;
+    /*background-image: url("../../../img/TB2U68FkXXXXXXBXFXXXXXXXXXX_!!379516416.png");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 21px;
+    opacity: 1;
+}
+.app_bar .mmp{
+    position: absolute;
+    left: 46px;
+    top: 0;
+    bottom: 0;
+    width: 41px;
+    height: 41px;
+    /*background-image: url("../../../img/logo.png");*/
+    background-repeat: no-repeat;
+    background-size: 41px;
+    margin: auto;
+}
+.app_bar .title{
+    margin-top: 12px;
+    font-size: 18px;
+    color: #888;
+    margin-left: 97px;
+    margin-bottom: 0;
+    margin-right: 84px;
+    line-height: 1;
+}
+.app_bar .des{
+    margin-top: 3px;
+    font-size: 14px;
+    color: #999;
+    margin-left: 97px;
+    margin-right: 84px;
+    line-height: 1;
+}
+.app_bar .loat_btn{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 74px;
+    height: 32px;
+    padding-top: 10px;
+    margin: auto;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    background-color: #ff7700;
+    border-radius: 4px;
+    box-shadow: inset 0 -2px #ff5500;
+    text-decoration: none;
+
+}

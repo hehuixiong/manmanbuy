@@ -17,6 +17,9 @@ $(document).ready(function () {
       url: 'http://139.199.192.48:9090/api/getmoneyctrl',
       /* 异步请求 */
       async: true,
+      beforeSend:function(){
+        $(".auto-loading").show();
+      },
       success: function (data) {
         console.log(data)
         /* 渲染商品 */
@@ -72,4 +75,15 @@ $.get("http://139.199.192.48:9090/api/getmoneyctrlproduct",{
   productid :20
 },function(data){
   console.log(data)
+});
+
+
+
+$(document).ajaxStart(function () {
+    $(".auto-loading").show();
+    $(".loadMore").hide();
+});
+$(document).ajaxStop(function () {
+    $(".auto-loading").hide();
+    $(".loadMore").show();
 });

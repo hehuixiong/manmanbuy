@@ -2,6 +2,7 @@
  * 导航分类-数据渲染
  */
 $.get("http://139.199.192.48:9090/api/getindexmenu", function (data) {
+  console.log(data)
   $("#nav-classify-row").html(template("nav-classify-tpl", data.result));
   //点击更多收缩
   $(document).on("click", "a", function () {
@@ -17,9 +18,19 @@ $.get("http://139.199.192.48:9090/api/getindexmenu", function (data) {
 /**
  * 折扣商品列表-数据渲染
  */
-$.get('http://139.199.192.48:9090/api/getmoneyctrl', function (data) {
-  $("#jxhdc-list").html(template('jxhdc-list-tpl', data.result));
-})
+$.ajax({
+  type:'get',
+  url:'http://139.199.192.48:9090/api/getmoneyctrl',
+  beforeSend:function(){
+    $(".auto-loading").show();
+    $(".more").hide();
+  },
+  success:function(data){
+    $("#jxhdc-list").html(template('jxhdc-list-tpl', data.result));
+    console.log(data)
+  }
+});
+
 
 
 // 点击回到顶部
@@ -33,17 +44,17 @@ $("#returnTop,.returnTop").on("click", function () {
 window.onscroll = function () {
   var srcollTop = $(document).scrollTop();
   if (srcollTop >= 200) {
-    $(".returnTop").fadeIn(1000);
+    $(".returnTop").fadeIn(300);
   } else {
-    $(".returnTop").fadeOut(1000);
+    $(".returnTop").fadeOut(300);
   }
 }
 
 
 $(document).ajaxStart(function () {
-  // $(".auto-loading").show();
-  alert("111")
+  $(".auto-loading").show();
 });
 $(document).ajaxStop(function () {
   $(".auto-loading").hide();
+  $(".more").show();
 });

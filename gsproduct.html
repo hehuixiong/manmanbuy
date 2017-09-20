@@ -101,29 +101,29 @@
     </div>
   </div>
   <!-- 底部 -->
-    <footer>
-      <div class="foot-top">
-        <a href="javascript:;">登录</a>
-        <a href="javascript:;">注册</a>
-        <a href="javascript:;">
-          <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
-          返回顶部
-        </a>
+  <footer>
+    <div class="foot-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;" id="returnTop">
+        <!-- <img src="./images/top.jpg" alt="返回顶部"> -->
+        返回顶部
+      </a>
+    </div>
+    <div class="footer">
+      <div>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
       </div>
-      <div class="footer">
-        <div>
-          <a href="javascript:;">手机APP下载</a>
-          <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
-        </div>
-        <div>m.manmanbuy.com</div>
-      </div>
-    </footer>
+      <div>m.manmanbuy.com</div>
+    </div>
+  </footer>
   </div>
   <!-- 各店铺模板 -->
   <script type="text/template" id="mall1-list-tpl">
     <ul>
       {{ each $data list i }}
-      <li data-id='{{ list.shopId }}' class="{{ list.shopId==0?"on":"" }}">
+      <li data-id='{{ list.shopId }}' class="{{ list.shopId==0?" on ":" " }}">
         <a href="javascript:;">{{ list.shopName }}<i class="iconfont icon-dui"></i></a>
       </li>
       {{ /each }}
@@ -133,8 +133,8 @@
   <script type="text/template" id="region-list-tpl">
     <ul>
       {{ each $data list i }}
-      <li data-id="{{ list.areaId }}" class="{{ i==0?"on":"" }}">
-        <a href="javascript:;" >{{ list.areaName }}<i class="iconfont icon-dui"></i></a>
+      <li data-id="{{ list.areaId }}" class="{{ i==0?" on ":" " }}">
+        <a href="javascript:;">{{ list.areaName }}<i class="iconfont icon-dui"></i></a>
       </li>
       {{ /each }}
     </ul>
@@ -157,7 +157,6 @@
   </script>
   <!-- 引入脚本 -->
   <script src="./lib/js/jquery/jquery.js"></script>
-  <script src="./lib/js/bootstrap/bootstrap.js"></script>
   <script src="./lib/js/jquery-form/src/jquery.form.js"></script>
   <script src="./lib/js/template/template-web.js"></script>
   <script src="./js/gsproduct.js"></script>
